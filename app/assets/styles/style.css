@@ -12,15 +12,54 @@ body {
     cursor: pointer;
 }
 
-.empty {
+.step1 {
     display: inline-block;
-    height: 160px;
-    width: 160px;
+    height: 500px;
+    width: 200px;
     margin: 10px;
     border: 3px black solid;
-    background-color: white;
+    background-color: rgb(223, 156, 156);
+    overflow: scroll;
+}
+.step2 {
+    display: inline-block;
+    height: 125px;
+    width: 200px;
+    margin: 10px;
+    border: 3px black solid;  
+    background-color: rgb(239, 201, 160);
+    overflow: scroll;
 }
 
+.step3 {
+    display: inline-block;
+    height: 250px;
+    width: 200px;
+    margin: 10px;
+    border: 3px black solid;
+    background-color: rgb(251, 229, 164);
+    overflow: scroll;
+}
+
+.step4 {
+    display: inline-block;
+    height: 500px;
+    width: 200px;
+    margin: 10px;
+    border: 3px black solid;
+    background-color: rgb(169, 194, 199);
+    overflow: scroll;
+}
+
+.step5 {
+    display: inline-block;
+    height: 500px;
+    width: 200px;
+    margin: 10px;
+    border: 3px black solid;
+    background-color: rgb(189, 214, 172);
+    overflow: scroll;
+}
 .hold {
     border: solid #ccc 4px;
 }
