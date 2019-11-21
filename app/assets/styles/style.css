@@ -21,9 +21,48 @@ body {
     background-color: rgb(223, 156, 156);
     overflow: scroll;
 }
+.step22 {
+    position: absolute;
+    top: 138px;
+    right: 913px;
+    display: inline-block;
+    height: 115px;
+    width: 200px;
+    margin: 10px 0;
+    border: 3px black solid;  
+    background-color: rgb(239, 201, 160);
+    overflow: top;
+}
+
+.step23 {
+    position: absolute;
+    top: 265px;
+    right: 903px;
+    display: inline-block;
+    height: 115px;
+    width: 200px;
+    margin: 10px;
+    border: 3px black solid;  
+    background-color: rgb(239, 201, 160);
+    overflow: top;
+}
+
+.step24 {
+    position: absolute;
+    top: 10px;
+    right: 903px;
+    display: inline-block;
+    height: 115px;
+    width: 200px;
+    margin: 10px;
+    border: 3px black solid;  
+    background-color: rgb(239, 201, 160);
+    overflow: top;
+}
+
 .step2 {
     display: inline-block;
-    height: 125px;
+    height: 115px;
     width: 200px;
     margin: 10px;
     border: 3px black solid;  
@@ -31,9 +70,22 @@ body {
     overflow: scroll;
 }
 
+.step31 {
+    position: absolute;
+    top: 10px;
+    right: 673px;
+    display: inline-block;
+    height: 245px;
+    width: 200px;
+    margin: 10px;
+    border: 3px black solid;
+    background-color: rgb(251, 229, 164);
+    overflow: top;
+}
+
 .step3 {
     display: inline-block;
-    height: 250px;
+    height: 245px;
     width: 200px;
     margin: 10px;
     border: 3px black solid;
