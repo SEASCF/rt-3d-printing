@@ -3,12 +3,11 @@ body {
 }
 
 .fill {
-    background-image: url('https://source.unsplash.com/random/150x150');
+    background: #e0ffee;
+    border: 1px solid black;
     position: relative;
-    height: 150px;
-    width: 150px;
-    top: 5px;
-    left: 5px;
+    padding:5px;
+    width: 190px;
     cursor: pointer;
 }
 

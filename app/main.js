@@ -5,7 +5,7 @@ const step22 = document.querySelectorAll('.step22');
 const step23 = document.querySelectorAll('.step23');
 const step24 = document.querySelectorAll('.step24');
 const step3 = document.querySelectorAll('.step3');
-const step32 = document.querySelectorAll('.step3');
+const step32 = document.querySelectorAll('.step32');
 const step4 = document.querySelectorAll('.step4');
 const step5 = document.querySelectorAll('.step5');
 
@@ -108,7 +108,7 @@ function dragLeave() {
     else if(this.className == 'step3') {
         this.className = 'step3';
     }
-    else if(this.className == 'step3') {
+    else if(this.className == 'step32') {
         this.className = 'step32';
     }
     else if(this.className == 'step4') {
@@ -138,7 +138,7 @@ function dragDrop() {
     else if(this.className == 'step3') {
         this.className = 'step3';
     }
-    else if(this.className == 'step3') {
+    else if(this.className == 'step32') {
         this.className = 'step32';
     }
     else if(this.className == 'step4') {
