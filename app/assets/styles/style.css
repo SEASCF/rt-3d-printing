@@ -12,7 +12,7 @@ body {
 }
 
 .step1 {
-    position: relative;
+    <!-- position: relative; -->
     display: inline-block;
     height: 500px;
     width: 200px;
