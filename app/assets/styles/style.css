@@ -3,12 +3,11 @@ body {
 }
 
 .fill {
-    background-image: url('https://source.unsplash.com/random/150x150');
+    background: #e0ffee;
+    border: 1px solid black;
     position: relative;
-    height: 150px;
-    width: 150px;
-    top: 5px;
-    left: 5px;
+    padding:5px;
+    width: 190px;
     cursor: pointer;
 }
 
@@ -31,7 +30,7 @@ body {
     margin: 10px 0;
     border: 3px black solid;  
     background-color: rgb(239, 201, 160);
-    overflow: top;
+    overflow: scroll;
 }
 
 .step23 {
@@ -44,7 +43,7 @@ body {
     margin: 10px;
     border: 3px black solid;  
     background-color: rgb(239, 201, 160);
-    overflow: top;
+    overflow: scroll;
 }
 
 .step24 {
@@ -57,7 +56,7 @@ body {
     margin: 10px;
     border: 3px black solid;  
     background-color: rgb(239, 201, 160);
-    overflow: top;
+    overflow: scroll;
 }
 
 .step2 {
@@ -70,7 +69,7 @@ body {
     overflow: scroll;
 }
 
-.step31 {
+.step3 {
     position: absolute;
     top: 10px;
     right: 673px;
@@ -80,10 +79,10 @@ body {
     margin: 10px;
     border: 3px black solid;
     background-color: rgb(251, 229, 164);
-    overflow: top;
+    overflow: scroll;
 }
 
-.step3 {
+.step32 {
     display: inline-block;
     height: 245px;
     width: 200px;
