@@ -1,4 +1,4 @@
-const fill = document.querySelector('.fill');
+const fill = document.querySelector('.list-items li');
 const step1 = document.querySelectorAll('.step1');
 const step22 = document.querySelectorAll('.step22');
 const step23 = document.querySelectorAll('.step23');
@@ -76,7 +76,7 @@ function dragStart() {
 }
 
 function dragEnd() {
-    this.className = 'fill';
+    this.className = '.list-items li';
 }
 
 function dragOver(e) {
