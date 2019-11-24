@@ -105,23 +105,11 @@ function dragLeave() {
     else if(this.className == 'step2') {
         this.className = 'step2';
     }
-    else if(this.className == 'step31') {
-        this.className = 'step3';
-    }
-    else if(this.className == 'step22') {
-        this.className = 'step22';
-    }
-    else if(this.className == 'step23') {
-        this.className = 'step23';
-    }
-    else if(this.className == 'step24') {
-        this.className = 'step24';
-    }
-    else if(this.className == 'step3') {
-        this.className = 'step3';
-    }
     else if(this.className == 'step32') {
         this.className = 'step32';
+    }    
+    else if(this.className == 'step3') {
+        this.className = 'step3';
     }
     else if(this.className == 'step4') {
         this.className = 'step4';
@@ -147,23 +135,11 @@ function dragDrop() {
     else if(this.className == 'step2') {
         this.className = 'step2';
     }
-    else if(this.className == 'step31') {
-        this.className = 'step31';
-    }
-    else if(this.className == 'step22') {
-        this.className = 'step22';
-    }
-    else if(this.className == 'step23') {
-        this.className = 'step23';
-    }
-    else if(this.className == 'step24') {
-        this.className = 'step24';
+    else if(this.className == 'step32') {
+        this.className = 'step32';
     }
     else if(this.className == 'step3') {
         this.className = 'step3';
-    }
-    else if(this.className == 'step32') {
-        this.className = 'step32';
     }
     else if(this.className == 'step4') {
         this.className = 'step4';
