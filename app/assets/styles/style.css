@@ -23,44 +23,6 @@ body {
     background-color: rgb(223, 156, 156);
     overflow: scroll;
 }
-.step22 {
-    position: absolute;
-    top: 580px;
-    right: 935px;
-    display: inline-block;
-    height: 177.5px;
-    width: 235px;
-    margin: 10px 0;
-    border: 3px black solid;  
-    background-color: rgb(239, 201, 160);
-    overflow: scroll;
-}
-
-.step23 {
-    position: absolute;
-    top: 200px;
-    right: 925px;
-    display: inline-block;
-    height: 177.5px;
-    width: 235px;
-    margin: 10px;
-    border: 3px black solid;  
-    background-color: rgb(239, 201, 160);
-    overflow: scroll;
-}
-
-.step24 {
-    position: absolute;
-    top: 10px;
-    right: 925px;
-    display: inline-block;
-    height: 177.5px;
-    width: 235px;
-    margin: 10px;
-    border: 3px black solid;  
-    background-color: rgb(239, 201, 160);
-    overflow: scroll;
-}
 
 .step2 {
     position: absolute;
@@ -75,18 +37,46 @@ body {
     overflow: scroll;
 }
 
-.step32 {
+.step2_2 {
     position: absolute;
-    top: 10px;
-    right: 675px;
+    top: 580px;
+    right: 935px;
     display: inline-block;
-    height: 365px;
+    height: 177.5px;
     width: 235px;
-    margin: 10px;
-    border: 3px black solid;
-    background-color: rgb(251, 229, 164);
+    margin: 10px 0;
+    border: 3px black solid;  
+    background-color: rgb(239, 201, 160);
     overflow: scroll;
 }
+
+.step2_3 {
+    position: absolute;
+    top: 200px;
+    right: 925px;
+    display: inline-block;
+    height: 177.5px;
+    width: 235px;
+    margin: 10px;
+    border: 3px black solid;  
+    background-color: rgb(239, 201, 160);
+    overflow: scroll;
+}
+
+.step2_4 {
+    position: absolute;
+    top: 10px;
+    right: 925px;
+    display: inline-block;
+    height: 177.5px;
+    width: 235px;
+    margin: 10px;
+    border: 3px black solid;  
+    background-color: rgb(239, 201, 160);
+    overflow: scroll;
+}
+
+
 
 .step3 {
     position: absolute;
@@ -100,6 +90,21 @@ body {
     background-color: rgb(251, 229, 164);
     overflow: scroll;
 }
+
+.step3_2 {
+    position: absolute;
+    top: 10px;
+    right: 675px;
+    display: inline-block;
+    height: 365px;
+    width: 235px;
+    margin: 10px;
+    border: 3px black solid;
+    background-color: rgb(251, 229, 164);
+    overflow: scroll;
+}
+
+
 
 .step4 {
     position: absolute;
