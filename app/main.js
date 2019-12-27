@@ -76,7 +76,7 @@ function dragStart() {
 }
 
 function dragEnd() {
-    this.className = '.list-items';
+    this.className = '.list-items li';
 }
 
 function dragOver(e) {
