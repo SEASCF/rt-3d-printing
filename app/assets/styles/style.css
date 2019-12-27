@@ -2,15 +2,6 @@ body {
     background: white;
 }
 
-.fill {
-    background: #e0ffee;
-    border: 1px solid black;
-    position: relative;
-    padding:2px;
-    width: 235px;
-    cursor: pointer;
-}
-
 .step1 {
     position: absolute;
     top: 10px;

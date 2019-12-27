@@ -76,7 +76,7 @@ function dragStart() {
 }
 
 function dragEnd() {
-    this.className = '.list-items li';
+    this.className = '.list-items';
 }
 
 function dragOver(e) {
@@ -147,5 +147,5 @@ function dragDrop() {
     else if(this.className == 'step5') {
         this.className = 'step5';
     }
-    this.append(fill); 
+    this.append(fill);
 }
