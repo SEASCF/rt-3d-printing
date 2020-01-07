@@ -1,9 +1,9 @@
 const fill = document.querySelector('.list-items li');
-const step01 = document.querySelectorAll('.step1');
-const step02 = document.querySelectorAll('.step22');
-const step03 = document.querySelectorAll('.step23');
-const step04 = document.querySelectorAll('.step24');
-const step05 = document.querySelectorAll('.step2');
+const step01 = document.querySelectorAll('.step01');
+const step02 = document.querySelectorAll('.step02');
+const step03 = document.querySelectorAll('.step03');
+const step04 = document.querySelectorAll('.step04');
+const step05 = document.querySelectorAll('.step05');
 const step3 = document.querySelectorAll('.step3');
 const step32 = document.querySelectorAll('.step32');
 const step4 = document.querySelectorAll('.step4');
@@ -105,12 +105,12 @@ function dragLeave() {
     else if(this.className == 'step05') {
         this.className = 'step05';
     }
-    else if(this.className == 'step32') {
-        this.className = 'step32';
-    }    
     else if(this.className == 'step3') {
         this.className = 'step3';
     }
+    else if(this.className == 'step32') {
+        this.className = 'step32';
+    }    
     else if(this.className == 'step4') {
         this.className = 'step4';
     }
@@ -135,11 +135,11 @@ function dragDrop() {
     else if(this.className == 'step05') {
         this.className = 'step05';
     }
-    else if(this.className == 'step32') {
-        this.className = 'step32';
-    }
     else if(this.className == 'step3') {
         this.className = 'step3';
+    }
+    else if(this.className == 'step32') {
+        this.className = 'step32';
     }
     else if(this.className == 'step4') {
         this.className = 'step4';

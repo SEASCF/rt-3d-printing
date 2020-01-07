@@ -29,7 +29,7 @@ body {
     top: 10px;
     right: 925px;
     display: inline-block;
-    height: 177.5px;
+    height: 245px;
     width: 235px;
     margin: 10px;
     border: 3px black solid;  
@@ -39,12 +39,12 @@ body {
 
 .step03 {
     position: absolute;
-    top: 200px;
-    right: 925px;
+    top: 10px;
+    right: 685px;
     display: inline-block;
-    height: 177.5px;
+    height: 245px;
     width: 235px;
-    margin: 10px;
+    margin: 10px 0;
     border: 3px black solid;  
     background-color: rgb(239, 201, 160);
     overflow: scroll;
@@ -52,10 +52,10 @@ body {
 
 .step04 {
     position: absolute;
-    top: 390px;
+    top: 265px;
     right: 925px;
     display: inline-block;
-    height: 177.5px;
+    height: 245px;
     width: 235px;
     margin: 10px;
     border: 3px black solid;  
@@ -65,10 +65,10 @@ body {
 
 .step05 {
     position: absolute;
-    top: 580px;
-    right: 935px;
+    top: 265px;
+    right: 685px;
     display: inline-block;
-    height: 177.5px;
+    height: 245px;
     width: 235px;
     margin: 10px 0;
     border: 3px black solid;  
@@ -76,12 +76,12 @@ body {
     overflow: scroll;
 }
 
-.step32 {
+.step3 {
     position: absolute;
-    top: 10px;
-    right: 675px;
+    top: 520px;
+    right: 925px;
     display: inline-block;
-    height: 365px;
+    height: 245px;
     width: 235px;
     margin: 10px;
     border: 3px black solid;
@@ -89,18 +89,20 @@ body {
     overflow: scroll;
 }
 
-.step3 {
+.step32 {
     position: absolute;
-    top: 390px;
+    top: 520px;
     right: 675px;
     display: inline-block;
-    height: 365px;
+    height: 245px;
     width: 235px;
     margin: 10px;
     border: 3px black solid;
     background-color: rgb(251, 229, 164);
     overflow: scroll;
 }
+
+
 
 .step4 {
     position: absolute;
@@ -173,7 +175,7 @@ body {
 }
 
 .list-title {
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #333;
     padding: 0.5rem;
