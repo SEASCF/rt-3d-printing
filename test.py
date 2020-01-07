@@ -1,11 +1,11 @@
-from __future__ import print_function
+
 import rt
 
 tracker = rt.Rt('https://ticket.seas.gwu.edu/rt/REST/1.0/', '3dprintingtest', 'changeme', verify_cert=False)
 try:
     tracker.login()
 
-except Exception, e:
+except Exception as e:
     print("Could not log in, error: " + e)
 
 else:
@@ -17,7 +17,8 @@ id = tracker.create_ticket(Queue= 'Test', Subject= 'Testing rt app but in the me
 
 tracker.edit_ticket(id, Subject = 'testing update')
 # print each ticket on a separate line
-print(*tickets, sep = "\n")
+for x in tickets:
+	print("subject = " + x['Subject'] + "\n" + "ticket number = " + str(x['numerical_id']) + "\n")
 
 # todo: figure out how to update tickets list when a new ticket is submit
 # todo: test update ticket feature
