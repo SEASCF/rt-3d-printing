@@ -2,7 +2,6 @@ body {
     background: white;
 }
 
-<<<<<<< HEAD
 .fill {
     background: #e0ffee;
     border: 1px solid black;
@@ -13,9 +12,6 @@ body {
 }
 
 .step01 {
-=======
-.step1 {
->>>>>>> eb306cf0c53669c57da931651357b3e3ed988c42
     position: absolute;
     top: 10px;
     right: 1170px;
@@ -28,15 +24,9 @@ body {
     overflow: scroll;
 }
 
-<<<<<<< HEAD
 .step02 {
     position: absolute;
     top: 10px;
-=======
-.step2 {
-    position: absolute;
-    top: 390px;
->>>>>>> eb306cf0c53669c57da931651357b3e3ed988c42
     right: 925px;
     display: inline-block;
     height: 177.5px;
@@ -47,13 +37,9 @@ body {
     overflow: scroll;
 }
 
-<<<<<<< HEAD
 .step03 {
-=======
-.step2_2 {
->>>>>>> eb306cf0c53669c57da931651357b3e3ed988c42
     position: absolute;
-    top: 580px;
+    top: 200px;
     right: 935px;
     display: inline-block;
     height: 177.5px;
@@ -64,15 +50,9 @@ body {
     overflow: scroll;
 }
 
-<<<<<<< HEAD
 .step04 {
     position: absolute;
     top: 390px;
-=======
-.step2_3 {
-    position: absolute;
-    top: 200px;
->>>>>>> eb306cf0c53669c57da931651357b3e3ed988c42
     right: 925px;
     display: inline-block;
     height: 177.5px;
@@ -83,17 +63,10 @@ body {
     overflow: scroll;
 }
 
-<<<<<<< HEAD
 .step05 {
     position: absolute;
     top: 580px;
     right: 935px;
-=======
-.step2_4 {
-    position: absolute;
-    top: 10px;
-    right: 925px;
->>>>>>> eb306cf0c53669c57da931651357b3e3ed988c42
     display: inline-block;
     height: 177.5px;
     width: 235px;
@@ -102,8 +75,6 @@ body {
     background-color: rgb(239, 201, 160);
     overflow: scroll;
 }
-
-
 
 .step3 {
     position: absolute;
@@ -118,7 +89,7 @@ body {
     overflow: scroll;
 }
 
-.step3_2 {
+.step32 {
     position: absolute;
     top: 10px;
     right: 675px;
