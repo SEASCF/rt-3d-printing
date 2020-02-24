@@ -1,120 +1,91 @@
-class DragAndDropApp extends React.Component {
-    state = {
-      tasks: [
-        {
-          name: "Add More Tasks",
-          category: "todo"
-        }
-      ]
-    };
-  
-    onDragOver = ev => {
-      ev.preventDefault();
-    };
-  
-    onDragStart = (ev, name) => {
-      ev.dataTransfer.setData("id", name);
-    };
-  
-    onDrop = (ev, cat) => {
-      const id = ev.dataTransfer.getData("id");
-  
-      let tasks = this.state.tasks.filter(task => {
-        if (task.name == id) {
-          task.category = cat;
-        }
-        return task;
-      });
-      this.setState({
-        ...this.state,
-        tasks
-      });
-    };
-  
-    handleKeyPress = ev => {
-      if ((ev.key == "Enter") && (ev.target.value != "")) {
-        this.setState({
-          tasks: [
-            ...this.state.tasks,
-            { name: ev.target.value, category: "todo" }
-          ]
-        });
-        ev.target.value = " ";
-      }
-    };
-  
-    render() {
-      var tasks = {
-        todo: [],
-        working: [],
-        complete: [],
-        trash: []
-      };
-  
-      this.state.tasks.forEach(t => {
-        tasks[t.category].push(
-          <div
-            className="item-container"
-            key={t.name}
-            draggable
-            onDragStart={e => this.onDragStart(e, t.name)}
-          >
-            {t.name}
-          </div>
-        );
-      });
-      
-      
-  
-      return (
-        <div>
-          <div id='background-image'></div>
-          <div class="container">
-            <div
-              className="drop-area"
-              onDragOver={e => this.onDragOver(e)}
-              onDrop={e => this.onDrop(e, "todo")}
-            >
-              <h1>Todo</h1>
-              {tasks.todo}
-            </div>
-            <div
-              className="drop-area"
-              onDragOver={e => this.onDragOver(e)}
-              onDrop={e => this.onDrop(e, "working")}
-            >
-              <h1>Working</h1>
-              {tasks.working}
-            </div>
-            <div
-              className="drop-area"
-              onDragOver={e => this.onDragOver(e)}
-              onDrop={e => this.onDrop(e, "complete")}
-            >
-              <h1>Complete</h1>
-              {tasks.complete}
-            </div>
-          </div>
-          <div>
-            <input
-              onKeyPress={e => this.handleKeyPress(e)}
-              className="input"
-              type="text"
-              placeholder="Task Name"
-            />
-  
-            <div
-              class="trash-drop"
-              onDrop={e => this.onDrop(e, "trash")}
-              onDragOver={e => this.onDragOver(e)}
-            >
-              Drop here to remove
-            </div>
-          </div>
-        </div>
-      );
-    }
-  }
-  
-  ReactDOM.render(<DragAndDropApp />, document.getElementById("root"));
-  
+dragula([
+	document.getElementById('1'),
+	document.getElementById('2'),
+	document.getElementById('3'),
+	document.getElementById('4'),
+	document.getElementById('5')
+])
+
+.on('drag', function(el) {
+	
+	// add 'is-moving' class to element being dragged
+	el.classList.add('is-moving');
+})
+.on('dragend', function(el) {
+	
+	// remove 'is-moving' class from element after dragging has stopped
+	el.classList.remove('is-moving');
+	
+	// add the 'is-moved' class for 600ms then remove it
+	window.setTimeout(function() {
+		el.classList.add('is-moved');
+		window.setTimeout(function() {
+			el.classList.remove('is-moved');
+		}, 600);
+	}, 100);
+});
+
+
+var createOptions = (function() {
+	var dragOptions = document.querySelectorAll('.drag-options');
+	
+	// these strings are used for the checkbox labels
+	var options = ['Research', 'Strategy', 'Inspiration', 'Execution'];
+	
+	// create the checkbox and labels here, just to keep the html clean. append the <label> to '.drag-options'
+	function create() {
+		for (var i = 0; i < dragOptions.length; i++) {
+
+			options.forEach(function(item) {
+				var checkbox = document.createElement('input');
+				var label = document.createElement('label');
+				var span = document.createElement('span');
+				checkbox.setAttribute('type', 'checkbox');
+				span.innerHTML = item;
+				label.appendChild(span);
+				label.insertBefore(checkbox, label.firstChild);
+				label.classList.add('drag-options-label');
+				dragOptions[i].appendChild(label);
+			});
+
+		}
+	}
+	
+	return {
+		create: create
+	}
+	
+	
+}());
+
+var showOptions = (function () {
+	
+	// the 3 dot icon
+	var more = document.querySelectorAll('.drag-header-more');
+	
+	function show() {
+		// show 'drag-options' div when the more icon is clicked
+		var target = this.getAttribute('data-target');
+		var options = document.getElementById(target);
+		options.classList.toggle('active');
+	}
+	
+	
+	function init() {
+		for (i = 0; i < more.length; i++) {
+			more[i].addEventListener('click', show, false);
+		}
+	}
+	
+	return {
+		init: init
+	}
+}());
+
+createOptions.create();
+showOptions.init();
+
+
+
+
+
