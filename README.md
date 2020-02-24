@@ -8,5 +8,7 @@ A web app that simplifies the 3d printing process for lab techs
 * rt
 
 # how do? 
-run ``` python flask_app.py ```
+``` ssh rebeccalshanley@3dtrack.seas.gwu.edu ```  
+
+run ``` gunicorn3 --workers=3 flask_app:app ``` while in the repo
 
