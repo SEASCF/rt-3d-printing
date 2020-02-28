@@ -57,6 +57,9 @@
  .drag-column-approved .drag-column-header, .drag-column-approved .is-moved, .drag-column-approved .drag-options {
 	 background: #00b961;
 }
+ .drag-column-drying .drag-column-header, .drag-column-drying .is-moved, .drag-column-drying .drag-options {
+         background: #fcba03;
+}
  .drag-column-header {
 	 display: flex;
 	 align-items: center;
