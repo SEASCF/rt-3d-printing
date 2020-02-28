@@ -1,16 +1,15 @@
-<head><link rel="stylesheet" href="../static/style.scss">
-
-</head>
+<head><link rel="stylesheet" href="../static/style.css"> </head>
 <section class="section">
-	<h1>3D printing RT</h1>
-	<h4>preliminary front end design</h4>
+	<h1>Kanban Drag and Drop Interface Layout</h1>
+	<h4>Inspired by <a href="https://trello.com/
+    ">Trello</a>, and <a href="https://www.google.com/keep/">Google Keep</a>, <a href="http://blog.invisionapp.com/design-project-management-tool/">Invision</a> and <a href="https://twitter.com/aaronstump">@aaronstump</a></h4>
 </section>
 
 <div class="drag-container">
 	<ul class="drag-list">
 		<li class="drag-column drag-column-on-hold">
 			<span class="drag-column-header">
-				<h2>3D Printing Queue</h2>
+				<h2>On Hold</h2>
 				<svg class="drag-header-more" data-target="options1" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
 			</span>
 				
@@ -23,11 +22,7 @@
 		</li>
 		<li class="drag-column drag-column-in-progress">
 			<span class="drag-column-header">
-				<h2>Currently Printing</h2>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-				<span class="drag-column-header">
-				<h4>Printer 1</h4>
+				<h2>In Progress</h2>
 				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
 			</span>
 			<div class="drag-options" id="options2"></div>
@@ -36,76 +31,10 @@
 				<li class="drag-item"></li>
 				<li class="drag-item"></li>
 			</ul>
-					<span class="drag-column-header">
-					<h4>Printer 2</h4>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options2"></div>
-			<ul class="drag-inner-list" id="2">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-						<span class="drag-column-header">
-					<h4>Printer 3</h4>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options2"></div>
-			<ul class="drag-inner-list" id="2">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-							<span class="drag-column-header">
-					<h4>Printer 4</h4>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options2"></div>
-			<ul class="drag-inner-list" id="2">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-				<li class="drag-column drag-column-in-progress">
-			<span class="drag-column-header">
-				<h2>Cleaning Tanks</h2><br>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-					<span class="drag-column-header">
-				<h4>Tank 1</h4>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options2"></div>
-			<ul class="drag-inner-list" id="2">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-				<span class="drag-column-header">
-					<h4>Tank 2</h4>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options2"></div>
-			<ul class="drag-inner-list" id="2">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-					<span class="drag-column-header">
-					<h4>Tank 3</h4>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options2"></div>
-			<ul class="drag-inner-list" id="2">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-		</li>
 		</li>
 		<li class="drag-column drag-column-needs-review">
 			<span class="drag-column-header">
-				<h2>Drying</h2>
+				<h2>Needs Review</h2>
 				<svg data-target="options3" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
 			</span>
 			<div class="drag-options" id="options3"></div>
@@ -118,7 +47,7 @@
 		</li>
 		<li class="drag-column drag-column-approved">
 			<span class="drag-column-header">
-				<h2>Ready for Pickup</h2>
+				<h2>Approved</h2>
 				<svg data-target="options4" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
 			</span>
 			<div class="drag-options" id="options4"></div>
@@ -133,6 +62,7 @@
 <section class="section">
 	<a href="https://github.com/bevacqua/dragula">Drag and drop functionality by <strong>bevacqua/dragula</strong></a>
 </section>
+
 
 
 
