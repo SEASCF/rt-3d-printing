@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>Eclectic Source App</title>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
@@ -15,23 +15,10 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{{ url_for('static', filename='test.js') }}"></script></body>
 </head>
 
 <body>
-    <div class="header-section">
-        <div class="header-top-bar">
-            <div class="top-bar-block left">
-                <div class="home-icon-block"><img class="home-icon" src="/images/arrow-81-64.png"></div>
-                <div class="search-form-wrapper">
-                    <form id="search-form"><input type="text" id="search-input"><input type="submit" id="search-submit" value=""></form>
-                </div>
-            </div>
-            <div class="top-bar-block center"><img class="top-bar-logo" src="https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/trello-header-logos/af7af6ed478d3460709d715d9b3f74a4/trello-logo-white.svg"></div>
-            <div class="top-bar-block right">
-                <div class="profile-icon-block"><img class="profile-icon" src="https://pbs.twimg.com/profile_images/751782659265822720/bQZcBl8v_bigger.jpg"></div>
-            </div>
-        </div>
-    </div>
     <div class="body-section">
         <div class="jobs-list-wrapper">
             <div class="jobs-list">
