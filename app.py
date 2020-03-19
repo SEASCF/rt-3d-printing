@@ -20,15 +20,37 @@ def populate():
     requestors = []
     date = []
     ticket_number = []
+    at = 0
 
+    # grab all ticket numbers
     for ticket in tickets:
         ticket_number.append(ticket["numerical_id"])
+    
+    # get requestor and date with ticket number
     for num in ticket_number:
         t = tracker.get_ticket(num)
         requestors.append(t["Requestors"])
         date.append(t["Created"])
 
-    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date)
+    # format requestor name so that it is just the netid
+    for i in range(len(requestors)):
+        requestors[i] = str(requestors[i]).strip("[]")
+        requestors[i] = str(requestors[i]).strip("''")
+        for j in range(len(str(requestors[i]))):
+            if str(requestors[i])[j] == "@":
+                at = j
+                break
+        requestors[i] = str(requestors[i])[0:j]
+
+    # format date so its just month/day/weekday
+    for i in range(len(date)):
+        date[i] = str((date[i])[0:11])
+
+
+    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date, num_tickets=len(tickets))
+
+    
+
 
 if __name__ == '__main__':
     app.run(debug=True)
