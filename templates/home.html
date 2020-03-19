@@ -1,139 +1,148 @@
-<head><link rel="stylesheet" href="../static/style.css"> </head>
-<section class="section">
-	<h1>3d Printing Tracker</h1>
-	<h4>Inspired by <a href="https://codepen.io/abangbejo/pen/jOPPOyV
-    ">Codepen</a></h4>
-</section>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="drag-container">
-	<ul class="drag-list">
-		<li class="drag-column drag-column-on-hold">
-			<span class="drag-column-header">
-				<h2>3D Printing Queue</h2>
-				<svg class="drag-header-more" data-target="options1" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-				
-			<div class="drag-options" id="options1"></div>
-			
-			<ul class="drag-inner-list" id="1">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-		</li>
-		<li class="drag-column drag-column-in-progress">
-			<span class="drag-column-header">
-				<h2>Currently Printing</h2>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<span class="drag-column-header">
-				<h2>Printer 1</h2>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options2"></div>
-			<ul class="drag-inner-list" id="2">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-			<span class="drag-column-header">
-				<h2>Printer 2</h2>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options2"></div>
-			<ul class="drag-inner-list" id="2">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>	
-			<span class="drag-column-header">
-				<h2>Printer 3</h2>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options2"></div>
-			<ul class="drag-inner-list" id="2">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-			<span class="drag-column-header">
-				<h2>Printer 4</h2>
-				<svg class="drag-header-more" data-target="options2" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options2"></div>
-			<ul class="drag-inner-list" id="2">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-		</li>
-		<li class="drag-column drag-column-needs-review">
-			<span class="drag-column-header">
-				<h2>Cleaning Tanks</h2>
-				<svg data-target="options3" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<span class="drag-column-header">
-				<h2>Tank 1</h2>
-				<svg data-target="options3" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options3"></div>
-			<ul class="drag-inner-list" id="3">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-			<span class="drag-column-header">
-				<h2>Tank 2</h2>
-				<svg data-target="options3" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options3"></div>
-			<ul class="drag-inner-list" id="3">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-			<span class="drag-column-header">
-				<h2>Tank 3</h2>
-				<svg data-target="options3" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options3"></div>
-			<ul class="drag-inner-list" id="3">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-		</li>
-		<li class="drag-column drag-column-drying">
-			<span class="drag-column-header">
-				<h2>Drying</h2>
-				<svg data-target="options4" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options4"></div>
-			<ul class="drag-inner-list" id="4">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-		</li>
-		<li class="drag-column drag-column-approved">
-			<span class="drag-column-header">
-				<h2>Ready for Pickup</h2>
-				<svg data-target="options4" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
-			</span>
-			<div class="drag-options" id="options4"></div>
-			<ul class="drag-inner-list" id="4">
-				<li class="drag-item"></li>
-				<li class="drag-item"></li>
-			</ul>
-		</li>
-	</ul>
-</div>
+<head>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>3D Print Tracker</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{{ url_for('static', filename='test.js') }}"></script></body>
+</head>
 
-<section class="section">
-	<a href="https://github.com/bevacqua/dragula">Drag and drop functionality by <strong>bevacqua/dragula</strong></a>
-</section>
+<body>
+    <div class="header-section">
+        <div class="header-top-bar">
+        </div>
+    </div>
+    <div class="body-section">
+        <div class="jobs-list-wrapper">
+            <div class="jobs-list">
+                <h2 class="jobs-list-heading">New Jobs</h2>
+                <div class="jobs-list-body" id="new-jobs">
+                    <ul id="new-jobs-list">
+                        {% for i in ticket_number %}
+                        <li>
+                            <div class="job-block" id="new-job-test">
+                                <div class="job-name-block">
+                                    <div class="job-name">{{ ticket_number[i] }}</div>
+                                    <div class="job-edit"><img class="edit-job-icon" src="https://image.flaticon.com/icons/svg/61/61456.svg"></div>
+                                </div>
+                                <div class="job-info-block">
+                                    <div class="job-date">{{ date[i] }}</div>
+                                    <div class="user-email">{{ requestors[i] }}</div>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="jobs-list-footer"></div>
+            </div>
+            <div class="jobs-list">
+                <h2 class="jobs-list-heading">In Progress</h2>
+                <div class="jobs-list-body" id="in-progress">
+                    <ul id="in-progress-list">
+                        <li>
+                            <div class="job-block" id="in-progress-test">
+                                <div class="job-name-block">
+                                    <div class="job-name">Corporate Logo</div>
+                                    <div class="job-edit"><img class="edit-job-icon" src="https://image.flaticon.com/icons/svg/61/61456.svg"></div>
+                                </div>
+                                <div class="job-info-block">
+                                    <div class="job-date">21 Apr</div>
+                                    <div class="user-email">test@gmail.com</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="jobs-list-footer"></div>
+            </div>
+            <div class="jobs-list">
+                <h2 class="jobs-list-heading">While you wait</h2>
+                <div class="jobs-list-body" id="waiting">
+                    <ul id="waiting-jobs-list">
+                        <li>
+                            <div class="job-block" id="waiting-job-test">
+                                <div class="job-name-block">
+                                    <div class="job-name">Brochure Design</div>
+                                    <div class="job-edit"><img class="edit-job-icon" src="https://image.flaticon.com/icons/svg/61/61456.svg"></div>
+                                </div>
+                                <div class="job-info-block">
+                                    <div class="job-date">01 Nov</div>
+                                    <div class="user-email">little@gmail.com</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="jobs-list-footer"></div>
+            </div>
+            <div class="jobs-list">
+                <h2 class="jobs-list-heading">Complete</h2>
+                <div class="jobs-list-body" id="complete">
+                    <ul id="complete-jobs-list">
+                        <li>
+                            <div class="job-block" id="complete-jobs-test">
+                                <div class="job-name-block">
+                                    <div class="job-name">Artwork Design</div>
+                                    <div class="job-edit"><img class="edit-job-icon" src="https://image.flaticon.com/icons/svg/61/61456.svg"></div>
+                                </div>
+                                <div class="job-info-block">
+                                    <div class="job-date">16 Mar</div>
+                                    <div class="user-email">flipper@test.com</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="jobs-list-footer"></div>
+            </div>
+            <div class="jobs-list">
+                <h2 class="jobs-list-heading">Re-work </h2>
+                <div class="jobs-list-body" id="rework">
+                    <ul id="rework-jobs-list">
+                        <li>
+                            <div class="job-block" id="rework-job-test">
+                                <div class="job-name-block">
+                                    <div class="job-name">Business Cards</div>
+                                    <div class="job-edit"><img class="edit-job-icon" src="https://image.flaticon.com/icons/svg/61/61456.svg"></div>
+                                </div>
+                                <div class="job-info-block">
+                                    <div class="job-date">26 Jun</div>
+                                    <div class="user-email">rework@es.com</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="jobs-list-footer"></div>
+            </div>
+            <div class="jobs-list">
+                <h2 class="jobs-list-heading">Feedback</h2>
+                <div class="jobs-list-body" id="feedback">
+                    <ul id="feedback-jobs-list">
+                        <li>
+                            <div class="job-block" id="feedback-job-test">
+                                <div class="job-name-block">
+                                    <div class="job-name">Video Animation</div>
+                                    <div class="job-edit"><img class="edit-job-icon" src="https://image.flaticon.com/icons/svg/61/61456.svg"></div>
+                                </div>
+                                <div class="job-info-block">
+                                    <div class="job-date">31 Dec</div>
+                                    <div class="user-email">memory@feedbac.com</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="jobs-list-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-section"></div>
+</body>
 
-
-
-
+</html>
