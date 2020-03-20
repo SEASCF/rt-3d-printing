@@ -25,18 +25,20 @@
                 <h2 class="jobs-list-heading">3D Printing Queue</h2>
                 <div class="jobs-list-body" id="new-jobs">
                     <ul id="new-jobs-list">
+                        {% for i in range(num_tickets) %}
                         <li>
                             <div class="job-block" id="new-job-test">
                                 <div class="job-name-block">
-                                    <div class="job-name">Artiste Logo</div>
+                                    <div class="job-name">{{ ticket_number[i] }}</div>
                                     <div class="job-edit"><img class="edit-job-icon" src="https://image.flaticon.com/icons/svg/61/61456.svg"></div>
                                 </div>
                                 <div class="job-info-block">
-                                    <div class="job-date">14 Feb</div>
-                                    <div class="user-email">codepen@gmail.com</div>
+                                    <div class="job-date">{{ date[i] }}</div>
+                                    <div class="user-email">{{ requestors[i] }}</div>
                                 </div>
                             </div>
                         </li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="jobs-list-footer"></div>
