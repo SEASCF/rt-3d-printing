@@ -16,7 +16,7 @@ else:
 @app.route("/api/populate")
 @app.route("/")
 def populate():
-    tickets = tracker.search(Queue='3 D printing', Status='open', Format= 's')
+    tickets = tracker.search(Queue='3 D printing', Status='stalled', Format= 's')
     requestors = []
     date = []
     ticket_number = []
@@ -48,8 +48,6 @@ def populate():
 
 
     return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date, num_tickets=len(tickets))
-
-    
 
 
 if __name__ == '__main__':
