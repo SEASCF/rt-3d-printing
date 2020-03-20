@@ -147,6 +147,12 @@ h2.jobs-list-heading{
 	font-weight: bold;
 	margin-left: 9px;
 }
+h4.jobs-list-heading{
+	font-family: "Lato";
+	font-size: 10px;
+	font-weight: bold;
+	margin-left: 9px;
+}
 
 .jobs-list-body{
 	height: 400px;
