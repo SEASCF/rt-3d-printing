@@ -60,7 +60,7 @@
             $('#in-progress2').css('background-color', 'rgba(0,0,0,.1)')
           },
           out: function( event, ui ) { //event is triggered when a sortable item is moved away from a sortable list.
-            $('#in-progress').css('background-color', 'rgba(0,0,0,.0)')
+            $('#in-progress2').css('background-color', 'rgba(0,0,0,.0)')
 
           },
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
