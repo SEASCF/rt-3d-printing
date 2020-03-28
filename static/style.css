@@ -112,10 +112,9 @@ ul {
 /**********************************************************
 Body Section Styles
 ***********************************************************/
-.body-section{
-	padding-top: 40px;
+table{
+	width: 100%; 
 }
-
 
 .jobs-list-wrapper{
 	display: flex;
