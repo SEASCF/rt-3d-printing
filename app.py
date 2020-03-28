@@ -1,5 +1,5 @@
-from flask import Flask, render_template, url_for
-import rt
+from flask import Flask, render_template, url_for, request
+import json, rt
 
 app = Flask(__name__)
 
@@ -46,9 +46,13 @@ def populate():
     for i in range(len(date)):
         date[i] = str((date[i])[0:11])
 
-
     return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date, num_tickets=len(tickets))
 
-
+@app.route("/api/updateTicket", methods=['POST'])
+def updateTicket():
+    jsdata = request.form['new_queue']
+    print("\n NEW QUEUE == ", jsdata)
+    return jsdata
+    
 if __name__ == '__main__':
     app.run(debug=True)
