@@ -131,7 +131,7 @@ table{
 
 .jobs-list{
 	width: 270px;
-	margin: 0 5px 30px 0px;
+	margin: 0 5px 0px 0px;
 	height: 90vh;
 	display: inline-block;
 	vertical-align: top;
@@ -249,4 +249,17 @@ h4.jobs-list-heading{
 }
 .jobs-list-body.tank{
 	height: 22vh;
+}
+.bug-button{
+	background-color: red;
+	color: white;
+}
+.admin-button{
+	float: right;
+	margin-right: 5px;
+}
+.close-btn{
+	width: 100%;
+	background-color: green;
+	color: white;
 }
