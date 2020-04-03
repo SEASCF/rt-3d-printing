@@ -3,7 +3,7 @@
       *************************************************************************************/
      $( function() {
         $( "#new-jobs-list" ).sortable({
-          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-3-list", "#printer-4-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#complete-jobs-list", "#feedback-jobs-list"],
+          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-3-list", "#printer-4-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#complete-jobs-list", "#rework-jobs-list"],
           over: function( event, ui ) { //triggered when sortable element hovers sortable list
             $('#new-jobs').css('background-color', 'rgba(0,0,0,.1)')
           },
@@ -28,7 +28,7 @@
 
       $( function() {
         $( "#printer-1-list" ).sortable({
-          connectWith: ["#printer-2-list", "#printer-3-list", "#printer-4-list", "#new-jobs-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#complete-jobs-list", "#feedback-jobs-list"],
+          connectWith: ["#printer-2-list", "#printer-3-list", "#printer-4-list", "#new-jobs-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#complete-jobs-list", "#rework-jobs-list"],
           over: function( event, ui ) { //triggered when sortable element hovers sortable list
             $('#in-progress1').css('background-color', 'rgba(0,0,0,.1)')
           },
@@ -55,7 +55,7 @@
 
       $( function() {
         $( "#printer-2-list" ).sortable({
-          connectWith: ["#printer-1-list", "#printer-3-list", "#printer-4-list", "#new-jobs-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#complete-jobs-list", "#feedback-jobs-list"],
+          connectWith: ["#printer-1-list", "#printer-3-list", "#printer-4-list", "#new-jobs-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#complete-jobs-list", "#rework-jobs-list"],
           over: function( event, ui ) { //triggered when sortable element hovers sortable list
             $('#in-progress2').css('background-color', 'rgba(0,0,0,.1)')
           },
@@ -83,7 +83,7 @@
 
       $( function() {
         $( "#printer-3-list" ).sortable({
-          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-4-list", "#new-jobs-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#complete-jobs-list", "#feedback-jobs-list"],
+          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-4-list", "#new-jobs-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#complete-jobs-list", "#rework-jobs-list"],
           over: function( event, ui ) { //triggered when sortable element hovers sortable list
             $('#in-progress3').css('background-color', 'rgba(0,0,0,.1)')
           },
@@ -110,7 +110,7 @@
 
       $( function() {
         $( "#printer-4-list" ).sortable({
-          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-3-list","#new-jobs-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#complete-jobs-list", "#feedback-jobs-list"],
+          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-3-list","#new-jobs-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#complete-jobs-list", "#rework-jobs-list"],
           over: function( event, ui ) { //triggered when sortable element hovers sortable list
             $('#in-progress4').css('background-color', 'rgba(0,0,0,.1)')
           },
@@ -138,7 +138,7 @@
 
       $( function() {
         $( "#cleaningtank-1-list" ).sortable({
-          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-3-list", "#printer-4-list", "#cleaningtank-2-list", "#cleaningtank-3-list", "#complete-jobs-list", "#feedback-jobs-list"],
+          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-3-list", "#printer-4-list", "#cleaningtank-2-list", "#cleaningtank-3-list", "#complete-jobs-list", "#rework-jobs-list"],
           over: function( event, ui ) { //triggered when sortable element hovers sortable list
             $('#waiting1').css('background-color', 'rgba(0,0,0,.1)')
           },
@@ -165,7 +165,7 @@
 
       $( function() {
         $( "#cleaningtank-2-list" ).sortable({
-          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-3-list", "#printer-4-list", "#cleaningtank-1-list", "#cleaningtank-3-list", "#complete-jobs-list", "#feedback-jobs-list"],
+          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-3-list", "#printer-4-list", "#cleaningtank-1-list", "#cleaningtank-3-list", "#complete-jobs-list", "#rework-jobs-list"],
           over: function( event, ui ) { //triggered when sortable element hovers sortable list
             $('#waiting2').css('background-color', 'rgba(0,0,0,.1)')
           },
@@ -192,7 +192,7 @@
 
       $( function() {
         $( "#cleaningtank-3-list" ).sortable({
-          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-3-list", "#printer-4-list", "#cleaningtank-1-list", "#cleaningtank-2-list", "#complete-jobs-list", "#feedback-jobs-list"],
+          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-3-list", "#printer-4-list", "#cleaningtank-1-list", "#cleaningtank-2-list", "#complete-jobs-list", "#rework-jobs-list"],
           over: function( event, ui ) { //triggered when sortable element hovers sortable list
             $('#waiting3').css('background-color', 'rgba(0,0,0,.1)')
           },
@@ -221,7 +221,7 @@
 
       $( function() {
         $( "#complete-jobs-list" ).sortable({
-          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-3-list", "#printer-4-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#feedback-jobs-list"],
+          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-3-list", "#printer-4-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#rework-jobs-list"],
           over: function( event, ui ) { //triggered when sortable element hovers sortable list
             $('#complete').css('background-color', 'rgba(0,0,0,.1)')
           },
@@ -249,7 +249,7 @@
 
       $( function() {
         $( "#rework-jobs-list" ).sortable({
-          connectWith: ["#printer-1-list", "#printer-2-list", "#printer-3-list", "#printer-4-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#feedback-jobs-list"],
+          connectWith: ["#new-jobs-list", "#printer-1-list", "#printer-2-list", "#printer-3-list", "#printer-4-list", "#cleaningtank-1-list" , "#cleaningtank-2-list", "#cleaningtank-3-list", "#complete-jobs-list"],
           over: function( event, ui ) { //triggered when sortable element hovers sortable list
             $('#rework').css('background-color', 'rgba(0,0,0,.1)')
           },
