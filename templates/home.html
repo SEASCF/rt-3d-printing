@@ -46,16 +46,15 @@
                             <div class="job-block" id="new-job-test">
                                 <div class="job-name-block">
                                     <div class="job-name">{{ ticket_number[i] }}</div>
-                                    <div class="job-edit"><img class="edit-job-icon" src="https://image.flaticon.com/icons/svg/61/61456.svg"></div>
+				    <div> <label class="container">
+                                         <input type="checkbox">
+                                          <span class="checkmark"></span>
+					  </label> </div>
                                 </div>
                                 <div class="job-info-block">
                                     <div class="job-date">{{ date[i] }}</div>
-				    <label class="container">Picked Up
-                                         <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                    </label>
+				    <div class="user-email">{{ requestors[i] }}</div>
                                 </div>
-				 <div class="user-email">{{ requestors[i] }}</div>
                             </div>
                         </li>
                         {% endfor %}

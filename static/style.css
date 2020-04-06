@@ -215,7 +215,6 @@ h4.jobs-list-heading{
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-between;
-	align-items: center;
 	align-content: center;
 	margin-bottom: 15px;
 }
@@ -228,15 +227,6 @@ h4.jobs-list-heading{
 	display: inline-block;
 	border-radius: 5px;
 	height:20px;
-}
-
-.edit-job-icon{
-	width: 10px;
-	height: 10px;
-}
-
-.edit-job-icon:hover{
-	opacity: 0.3;
 }
 
 .user-email{
@@ -267,10 +257,9 @@ h4.jobs-list-heading{
 .container {
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  padding-left: 20px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -291,8 +280,8 @@ h4.jobs-list-heading{
   position: absolute;
   top: 0;
   left: 0;
-  height: 20px;
-  width: 20px;
+  height: 16px;
+  width: 16px;
   background-color: #eee;
 }
 
@@ -320,8 +309,8 @@ h4.jobs-list-heading{
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-  left: 7px;
-  top: 4px;
+  left: 5px;
+  top: 2px;
   width: 4px;
   height: 8px;
   border: solid white;
