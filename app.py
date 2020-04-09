@@ -16,12 +16,20 @@ else:
 @app.route("/api/populate")
 @app.route("/")
 def populate():
-    tickets = tracker.search(Queue='3 D printing', Status='stalled', Format= 's')
+    tickets = tracker.search(Queue='3 D printing', Status='open', Format= 's')
+    tickets.extend(tracker.search(Queue='3 D printing', Status='new', Format= 's'))
     requestors = []
     date = []
     ticket_number = []
+    valid_subj = ['- 3D Printing Request -', 'PRINTING ON PRINTER 1 -', 'PRINTING ON PRINTER 2 -', 'PRINTING ON PRINTER 3 -', 'PRINTING ON PRINTER 4 -', 'IN CLEANING TANK 1 -', 'IN CLEANING TANK 2 -', 'IN CLEANING TANK 3 -', 'DRYING -', 'READY FOR PICKUP -',]
     at = 0
 
+    # remove any tickets from list that are not 3D printing requests
+    for ticket in tickets:
+        count = 0
+        if ticket["Subject"].find("- 3D Printing Request -") == -1:
+            tickets.remove(ticket)
+    
     # grab all ticket numbers
     for ticket in tickets:
         ticket_number.append(ticket["numerical_id"])
@@ -50,9 +58,36 @@ def populate():
 
 @app.route("/api/updateTicket", methods=['POST'])
 def updateTicket():
-    jsdata = request.form['new_queue']
-    print("\n NEW QUEUE == ", jsdata)
-    return jsdata
+    queue = request.form['new_queue']
+    ticket_number = request.form['ticket_num']
+
+    valid_subj = ['PRINTING ON PRINTER 1 -', 'PRINTING ON PRINTER 2 -', 'PRINTING ON PRINTER 3 -', 'PRINTING ON PRINTER 4 -', 'IN CLEANING TANK 1 -', 'IN CLEANING TANK 2 -', 'IN CLEANING TANK 3 -', 'DRYING -', 'READY FOR PICKUP -',]
+
+    t = tracker.get_ticket(ticket_number)
+    prev_owner = t['Owner']
+    prev_subject = t['Subject']
+
+    # determine what subject the ticket previously had
+    detect_subj = -1
+    for i in range(0, len(valid_subj)):
+        if prev_subject.find(valid_subj[i]) != -1:
+            detect_subj = i
+
+    # steal ticket
+    tracker.steal(ticket_id=ticket_number)
+
+    # update the subject
+    if detect_subj == -1:
+        split_subj = prev_subject.split('-')
+        tracker.edit_ticket(ticket_id=ticket_number, Subject= (queue + split_subj[0] + "-" + split_subj[1] + "-" + split_subj[2]))   
+    else:
+        split_subj = prev_subject.split('-')
+        tracker.edit_ticket(ticket_id=ticket_number, Subject= (queue + split_subj[1] + "-" + split_subj[2] + "-" + split_subj[3]))   
+
+    # give ticket back to original owner
+    tracker.edit_ticket(ticket_id=ticket_number, Owner=prev_owner)
+
+    return queue
     
 if __name__ == '__main__':
     app.run(debug=True)
