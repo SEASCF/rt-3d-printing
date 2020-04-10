@@ -173,6 +173,7 @@
             $('#waiting2').css('background-color', 'rgba(0,0,0,.0)')
           },
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
+		 
             $.post( "/api/updateTicket", {
               new_queue: "IN CLEANING TANK 2 - "
             });
@@ -200,6 +201,7 @@
             $('#waiting3').css('background-color', 'rgba(0,0,0,.0)')
           },
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
+		  
             $.post( "/api/updateTicket", {
               new_queue: "IN CLEANING TANK 3 - "
             });
@@ -229,6 +231,7 @@
             $('#complete').css('background-color', 'rgba(0,0,0,.0)')
           },
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
+		 
             $.post( "/api/updateTicket", {
               new_queue: "DRYING - "
             });
@@ -257,6 +260,8 @@
             $('#rework').css('background-color', 'rgba(0,0,0,.0)')
           },
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
+	    document.getElementById("cover").removeAttribute("id");
+	    console.log(document.getElementsByClassName("checkmark"));
             $.post( "/api/updateTicket", {
               new_queue: "READY FOR PICKUP - "
             });
