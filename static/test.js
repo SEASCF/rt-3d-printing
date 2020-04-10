@@ -185,11 +185,7 @@
             $('#waiting2').css('background-color', 'rgba(0,0,0,.0)')
           },
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
-<<<<<<< HEAD
-		 
-=======
             var x = document.getElementById("waiting2");
->>>>>>> a88b8a27e95102ba792d2cd35e95164ca6686b38
             $.post( "/api/updateTicket", {
               new_queue: "IN CLEANING TANK 2 - ",
               ticket_num: (x.innerText).substring(0, 5)
@@ -218,11 +214,7 @@
             $('#waiting3').css('background-color', 'rgba(0,0,0,.0)')
           },
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
-<<<<<<< HEAD
-		  
-=======
             var x = document.getElementById("waiting3");
->>>>>>> a88b8a27e95102ba792d2cd35e95164ca6686b38
             $.post( "/api/updateTicket", {
               new_queue: "IN CLEANING TANK 3 - ",
               ticket_num: (x.innerText).substring(0, 5)
