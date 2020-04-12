@@ -329,3 +329,7 @@ h4.jobs-list-heading{
   left:0;
   display:none;
 }
+a{
+	color: white;
+text-decoration: none;
+}
