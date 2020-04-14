@@ -333,3 +333,9 @@ a{
 	color: white;
 text-decoration: none;
 }
+
+#rework-jobs-list #cover{
+	 display:flex; 
+	 background: lightgray; 
+	 height: 16px; 
+}

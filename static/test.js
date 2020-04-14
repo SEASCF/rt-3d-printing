@@ -275,9 +275,10 @@
             $('#rework').css('background-color', 'rgba(0,0,0,.0)')
           },
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
-	    document.getElementById("cover").removeAttribute("id");
+	  //  document.getElementById("cover").removeAttribute("id");
 	    console.log(document.getElementsByClassName("checkmark"));
             var x = document.getElementById("rework");
+	    console.log(document.getElementById("rework-jobs-list")); 
             $.post( "/api/updateTicket", {
               new_queue: "READY FOR PICKUP - ",
               ticket_num: (x.innerText).substring(0, 5)
