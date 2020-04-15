@@ -329,3 +329,13 @@ h4.jobs-list-heading{
   left:0;
   display:none;
 }
+a{
+	color: white;
+text-decoration: none;
+}
+
+#rework-jobs-list #cover{
+	 display:flex; 
+	 background: lightgray; 
+	 height: 16px; 
+}
