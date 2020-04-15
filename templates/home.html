@@ -42,21 +42,23 @@
                 <div class="jobs-list-body" id="new-jobs">
                     <ul id="new-jobs-list">
                         {% for i in range(num_tickets) %}
-                        <li>
-                            <div class="job-block" id="new-job-test">
-                                <div class="job-name-block">
+                            {% if subject[i] == '' %}
+                                <li>
+                                    <div class="job-block" id="new-job-test">
+                                        <div class="job-name-block">
                                     <div class="job-name">{{ ticket_number[i] }}</div>
-				    <div> <label class="container">
-                                         <input type="checkbox"id="cbox">
-                                          <span class="checkmark"id="cover"></span>
-					  </label> </div>
+                                    <div> <label class="container">
+                                                <input type="checkbox"id="cbox">
+                                                <span class="checkmark"id="cover"></span>
+                                    </label> </div>
+                                    </div>
+                                    <div class="job-info-block">
+                                        <div class="job-date">{{ date[i] }}</div>
+                                    <div class="user-email">{{ requestors[i] }}</div>
+                                    </div>
                                 </div>
-                                <div class="job-info-block">
-                                    <div class="job-date">{{ date[i] }}</div>
-				    <div class="user-email">{{ requestors[i] }}</div>
-                                </div>
-                            </div>
-                        </li>
+                                </li>
+                            {% endif %}
                         {% endfor %}
                     </ul>
                 </div>
@@ -67,25 +69,97 @@
                 <h4 class="jobs-list-heading">Printer 1</h4>
                 <div class="jobs-list-body printer" id="in-progress1">
                     <ul id="printer-1-list">
-
+                        {% for i in range(num_tickets) %}
+                            {% if subject[i] == 'PRINTING ON PRINTER 1' %}
+                                <li>
+                                    <div class="job-block" id="new-job-test">
+                                        <div class="job-name-block">
+                                    <div class="job-name">{{ ticket_number[i] }}</div>
+                                    <div> <label class="container">
+                                                <input type="checkbox"id="cbox">
+                                                <span class="checkmark"id="cover"></span>
+                                    </label> </div>
+                                    </div>
+                                    <div class="job-info-block">
+                                        <div class="job-date">{{ date[i] }}</div>
+                                    <div class="user-email">{{ requestors[i] }}</div>
+                                    </div>
+                                </div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
                 <h4 class="jobs-list-heading">Printer 2</h4>
                 <div class="jobs-list-body printer" id="in-progress2">
                     <ul id="printer-2-list">
-
+                        {% for i in range(num_tickets) %}
+                            {% if subject[i] == 'PRINTING ON PRINTER 2' %}
+                                <li>
+                                    <div class="job-block" id="new-job-test">
+                                        <div class="job-name-block">
+                                    <div class="job-name">{{ ticket_number[i] }}</div>
+                                    <div> <label class="container">
+                                                <input type="checkbox"id="cbox">
+                                                <span class="checkmark"id="cover"></span>
+                                    </label> </div>
+                                    </div>
+                                    <div class="job-info-block">
+                                        <div class="job-date">{{ date[i] }}</div>
+                                    <div class="user-email">{{ requestors[i] }}</div>
+                                    </div>
+                                </div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
                 <h4 class="jobs-list-heading">Printer 3</h4>
                 <div class="jobs-list-body printer" id="in-progress3">
                     <ul id="printer-3-list">
-
+                        {% for i in range(num_tickets) %}
+                            {% if subject[i] == 'PRINTING ON PRINTER 3' %}
+                                <li>
+                                    <div class="job-block" id="new-job-test">
+                                        <div class="job-name-block">
+                                    <div class="job-name">{{ ticket_number[i] }}</div>
+                                    <div> <label class="container">
+                                                <input type="checkbox"id="cbox">
+                                                <span class="checkmark"id="cover"></span>
+                                    </label> </div>
+                                    </div>
+                                    <div class="job-info-block">
+                                        <div class="job-date">{{ date[i] }}</div>
+                                    <div class="user-email">{{ requestors[i] }}</div>
+                                    </div>
+                                </div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
                 <h4 class="jobs-list-heading">Printer 4</h4>
                 <div class="jobs-list-body printer" id="in-progress4">
                     <ul id="printer-4-list">
-
+                        {% for i in range(num_tickets) %}
+                            {% if subject[i] == 'PRINTING ON PRINTER 4' %}
+                                <li>
+                                    <div class="job-block" id="new-job-test">
+                                        <div class="job-name-block">
+                                    <div class="job-name">{{ ticket_number[i] }}</div>
+                                    <div> <label class="container">
+                                                <input type="checkbox"id="cbox">
+                                                <span class="checkmark"id="cover"></span>
+                                    </label> </div>
+                                    </div>
+                                    <div class="job-info-block">
+                                        <div class="job-date">{{ date[i] }}</div>
+                                    <div class="user-email">{{ requestors[i] }}</div>
+                                    </div>
+                                </div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="jobs-list-footer"></div>
@@ -95,19 +169,73 @@
                 <h4 class="jobs-list-heading">Tank 1</h4>
                 <div class="jobs-list-body tank" id="waiting1">
                     <ul id="cleaningtank-1-list">
-
+                        {% for i in range(num_tickets) %}
+                            {% if subject[i] == 'IN CLEANING TANK 1' %}
+                                <li>
+                                    <div class="job-block" id="new-job-test">
+                                        <div class="job-name-block">
+                                    <div class="job-name">{{ ticket_number[i] }}</div>
+                                    <div> <label class="container">
+                                                <input type="checkbox"id="cbox">
+                                                <span class="checkmark"id="cover"></span>
+                                    </label> </div>
+                                    </div>
+                                    <div class="job-info-block">
+                                        <div class="job-date">{{ date[i] }}</div>
+                                    <div class="user-email">{{ requestors[i] }}</div>
+                                    </div>
+                                </div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
                 <h4 class="jobs-list-heading">Tank 2</h4>
                 <div class="jobs-list-body tank" id="waiting2">
                     <ul id="cleaningtank-2-list">
-
+                        {% for i in range(num_tickets) %}
+                            {% if subject[i] == 'IN CLEANING TANK 2' %}
+                                <li>
+                                    <div class="job-block" id="new-job-test">
+                                        <div class="job-name-block">
+                                    <div class="job-name">{{ ticket_number[i] }}</div>
+                                    <div> <label class="container">
+                                                <input type="checkbox"id="cbox">
+                                                <span class="checkmark"id="cover"></span>
+                                    </label> </div>
+                                    </div>
+                                    <div class="job-info-block">
+                                        <div class="job-date">{{ date[i] }}</div>
+                                    <div class="user-email">{{ requestors[i] }}</div>
+                                    </div>
+                                </div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
                 <h4 class="jobs-list-heading">Tank 3</h4>
                 <div class="jobs-list-body tank" id="waiting3">
                     <ul id="cleaningtank-3-list">
-
+                        {% for i in range(num_tickets) %}
+                            {% if subject[i] == 'IN CLEANING TANK 3' %}
+                                <li>
+                                    <div class="job-block" id="new-job-test">
+                                        <div class="job-name-block">
+                                    <div class="job-name">{{ ticket_number[i] }}</div>
+                                    <div> <label class="container">
+                                                <input type="checkbox"id="cbox">
+                                                <span class="checkmark"id="cover"></span>
+                                    </label> </div>
+                                    </div>
+                                    <div class="job-info-block">
+                                        <div class="job-date">{{ date[i] }}</div>
+                                    <div class="user-email">{{ requestors[i] }}</div>
+                                    </div>
+                                </div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="jobs-list-footer"></div>
@@ -116,7 +244,25 @@
                 <h2 class="jobs-list-heading">Drying</h2>
                 <div class="jobs-list-body" id="complete">
                     <ul id="complete-jobs-list">
-
+                        {% for i in range(num_tickets) %}
+                            {% if subject[i] == 'DRYING' %}
+                                <li>
+                                    <div class="job-block" id="new-job-test">
+                                        <div class="job-name-block">
+                                    <div class="job-name">{{ ticket_number[i] }}</div>
+                                    <div> <label class="container">
+                                                <input type="checkbox"id="cbox">
+                                                <span class="checkmark"id="cover"></span>
+                                    </label> </div>
+                                    </div>
+                                    <div class="job-info-block">
+                                        <div class="job-date">{{ date[i] }}</div>
+                                    <div class="user-email">{{ requestors[i] }}</div>
+                                    </div>
+                                </div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="jobs-list-footer"></div>
@@ -125,7 +271,25 @@
                 <h2 class="jobs-list-heading">Ready for Pickup </h2>
                 <div class="jobs-list-body" id="rework">
                     <ul id="rework-jobs-list">
-
+                        {% for i in range(num_tickets) %}
+                            {% if subject[i] == 'READY FOR PICKUP' %}
+                                <li>
+                                    <div class="job-block" id="new-job-test">
+                                        <div class="job-name-block">
+                                    <div class="job-name">{{ ticket_number[i] }}</div>
+                                    <div> <label class="container">
+                                                <input type="checkbox"id="cbox">
+                                                <span class="checkmark"id="cover"></span>
+                                    </label> </div>
+                                    </div>
+                                    <div class="job-info-block">
+                                        <div class="job-date">{{ date[i] }}</div>
+                                    <div class="user-email">{{ requestors[i] }}</div>
+                                    </div>
+                                </div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="jobs-list-footer"><button class="close-btn">Close all Picked Up Tickets</button>

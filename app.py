@@ -18,27 +18,27 @@ else:
 def populate():
     tickets = tracker.search(Queue='3 D printing', Status='open', Format= 's')
     tickets.extend(tracker.search(Queue='3 D printing', Status='new', Format= 's'))
+    valid_subj = ['PRINTING ON PRINTER 1', 'PRINTING ON PRINTER 2', 'PRINTING ON PRINTER 3', 'PRINTING ON PRINTER 4', 'IN CLEANING TANK 1', 'IN CLEANING TANK 2', 'IN CLEANING TANK 3', 'DRYING', 'READY FOR PICKUP',]
     requestors = []
     date = []
     ticket_number = []
-    valid_subj = ['- 3D Printing Request -', 'PRINTING ON PRINTER 1 -', 'PRINTING ON PRINTER 2 -', 'PRINTING ON PRINTER 3 -', 'PRINTING ON PRINTER 4 -', 'IN CLEANING TANK 1 -', 'IN CLEANING TANK 2 -', 'IN CLEANING TANK 3 -', 'DRYING -', 'READY FOR PICKUP -',]
-    at = 0
+    subj = []
 
     # remove any tickets from list that are not 3D printing requests
     for ticket in tickets:
-        count = 0
         if ticket["Subject"].find("- 3D Printing Request -") == -1:
             tickets.remove(ticket)
-    
+            
     # grab all ticket numbers
     for ticket in tickets:
         ticket_number.append(ticket["numerical_id"])
-    
-    # get requestor and date with ticket number
-    for num in ticket_number:
-        t = tracker.get_ticket(num)
+        
+    # get requestor/date/subject with ticket number
+    for i in ticket_number:
+        t = tracker.get_ticket(i)
         requestors.append(t["Requestors"])
         date.append(t["Created"])
+        subj.append(t["Subject"])
 
     # format requestor name so that it is just the netid
     for i in range(len(requestors)):
@@ -50,11 +50,25 @@ def populate():
                 break
         requestors[i] = str(requestors[i])[0:j]
 
-    # format date so its just month/day/weekday
+    # format date so it's just month/day/weekday
     for i in range(len(date)):
         date[i] = str((date[i])[0:11])
 
-    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date, num_tickets=len(tickets))
+    # format subject so it's just the important part
+    detect_subj = -1
+    for i in range(0, len(subj)):
+        detect_subj = -1
+        for j in range(0, len(valid_subj)):
+            if subj[i].find(valid_subj[j]) != -1:
+                detect_subj = j
+                break
+        if detect_subj == -1:
+            subj[i] = ''
+        else:
+            subj[i] = valid_subj[j]
+
+    # send all of these formatted lists to the html file to populate the board
+    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date, subject=subj, num_tickets=len(tickets))
 
 @app.route("/api/updateTicket", methods=['POST'])
 def updateTicket():
@@ -88,6 +102,6 @@ def updateTicket():
     tracker.edit_ticket(ticket_id=ticket_number, Owner=prev_owner)
 
     return queue
-    
+
 if __name__ == '__main__':
     app.run(debug=True)
