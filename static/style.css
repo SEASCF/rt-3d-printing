@@ -216,7 +216,6 @@ h4.jobs-list-heading{
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-content: center;
-	margin-bottom: 15px;
 }
 
 .job-date{
@@ -325,6 +324,7 @@ h4.jobs-list-heading{
   top:0;
   left:0;
   display:none;
+ margin-left:30px;  
 }
 a{
     color: white;
@@ -339,4 +339,10 @@ a{
 }
 #color{
 	background-color:gray; 
+}
+#submit-btn{
+         border-radius:5px;
+    background:#ccc;
+  border:0 none;
+        cursor:pointer;
 }

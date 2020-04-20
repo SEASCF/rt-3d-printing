@@ -279,8 +279,11 @@
                                         <div class="job-name-block">
                                     <div class="job-name">{{ ticket_number[i] }}</div>
                                     <div> <label class="container">
-                                                <input type="checkbox"id="cbox" onclick="colorChangeFunc()">
-                                                <span class="checkmark"id="cover"></span>
+                                                <form action="">
+                                                <input type="checkbox"id="cbox">
+						<span class="checkmark"id="cover"></span><br>
+                                                <input type="submit"id="submit-btn">Confirm
+                                                </form>
                                     </label> </div>
                                     </div>
                                     <div class="job-info-block">
@@ -303,12 +306,4 @@
 	    <button class="admin-button">Admin Login</button>
     </div>
 </body>
-<script>
-function myFunction() {
-  var checkBox = document.getElementById("cbox");
-  if (checkBox.checked == true){
-    document.getElementById("new-job-test").setAttribute("id", "color");
-  }
-}
-</script>
 </html>
