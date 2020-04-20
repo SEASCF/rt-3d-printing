@@ -18,6 +18,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="{{ url_for('static', filename='test.js') }}"></script></body>
     <script src="{{ url_for('static', filename='refresh.js') }}"></script></body>
+    <script src="{{ url_for('static', filename='checkbox.js') }}"></script></body>
 </head>
 
 <body>
@@ -279,8 +280,8 @@
                                         <div class="job-name-block">
                                     <div class="job-name">{{ ticket_number[i] }}</div>
                                     <div> <label class="container">
-                                                <form action="">
-                                                <input type="checkbox"id="cbox">
+                                                <form action="../static/checkbox.js">
+                                                <input type="checkbox"id="cbox" onchange="doalert(this)">
 						<span class="checkmark"id="cover"></span><br>
                                                 <input type="submit"id="submit-btn">Confirm
                                                 </form>
