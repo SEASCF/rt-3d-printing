@@ -19,6 +19,7 @@
     <script src="{{ url_for('static', filename='test.js') }}"></script></body>
     <script src="{{ url_for('static', filename='refresh.js') }}"></script></body>
     <script src="{{ url_for('static', filename='checkbox.js') }}"></script></body>
+    <script src="{{ url_for('static', filename='login.js') }}"></script></body>
 </head>
 
 <body>
@@ -277,13 +278,13 @@
                             {% if subject[i] == 'READY FOR PICKUP' %}
                                 <li>
                                     <div class="job-block" id="new-job-test">
+				    <div id="checked">
                                         <div class="job-name-block">
                                     <div class="job-name">{{ ticket_number[i] }}</div>
                                     <div> <label class="container">
                                                 <form action="../static/checkbox.js">
-                                                <input type="checkbox"id="cbox" onchange="doalert(this)">
+                                                <input type="checkbox"id="cbox" onchange="getCheckedBoxes(this)">
 						<span class="checkmark"id="cover"></span><br>
-                                                <input type="submit"id="submit-btn">Confirm
                                                 </form>
                                     </label> </div>
                                     </div>
@@ -291,7 +292,8 @@
                                         <div class="job-date">{{ date[i] }}</div>
                                     <div class="user-email">{{ requestors[i] }}</div>
                                     </div>
-                                </div>
+                                    </div>
+				</div>
                                 </li>
                             {% endif %}
                         {% endfor %}
@@ -305,6 +307,16 @@
     <div class="footer-section">
 	    <button class="bug-button"><a href = "https://seasgwu.qualtrics.com/jfe/form/SV_9p2PFVL3zhFa4Lj">Report a Bug about the Tracker</a></button>
 	    <button class="admin-button">Admin Login</button>
+	    <button class="login-button" onclick="displayModal()" style="width:auto;">Login</button>
+		<div id="id01" class="modal">
+		  <form class="modal-content animate" action="../static/login.js" method="post">
+   		 <div class="netid-container">
+     		 <label for="uname"><b>NetID</b></label>
+    		  <input type="text" placeholder="Enter NetID" name="uname" required>
+     		 <button type="submit">Login</button>
+   		 </div>
+		  </form>
+		</div>
     </div>
 </body>
 </html>
