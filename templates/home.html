@@ -47,20 +47,23 @@
                         {% for i in range(num_tickets) %}
                             {% if subject[i] == '' %}
                                 <li>
-                                    <div class="job-block" id="new-job-test">
-                                        <div class="job-name-block">
-                                    <div class="job-name">{{ ticket_number[i] }}</div>
+                                <div class="job-block" id="new-job-test">
+                                    <form action="#" onchange="myFuncCheck(this)">
+                                    <div id="checked">
+                                     <div class="job-name-block">
+                                    <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
                                     <div> <label class="container">
-                                                <form action="../static/checkbox.js">
                                                 <input type="checkbox"id="cbox" onchange="doalert(this)">
-						<span class="checkmark"id="cover"></span><br>
-                                                </form>
+                                                <span class="checkmark"id="cover"></span><br>
+                                                <input type="submit" value="Submit">
                                     </label> </div>
                                     </div>
                                     <div class="job-info-block">
                                         <div class="job-date">{{ date[i] }}</div>
                                     <div class="user-email">{{ requestors[i] }}</div>
                                     </div>
+                                    </div>
+                                    </form>
                                 </div>
                                 </li>
                             {% endif %}
@@ -77,20 +80,23 @@
                         {% for i in range(num_tickets) %}
                             {% if subject[i] == 'PRINTING ON PRINTER 1' %}
                                 <li>
-                                    <div class="job-block" id="new-job-test">
-                                        <div class="job-name-block">
-                                   <div class="job-name">{{ ticket_number[i] }}</div>
+                                   <div class="job-block" id="new-job-test">
+                                    <form action="#" onchange="myFuncCheck(this)">
+                                    <div id="checked">
+                                     <div class="job-name-block">
+                                    <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
                                     <div> <label class="container">
-                                                <form action="../static/checkbox.js">
                                                 <input type="checkbox"id="cbox" onchange="doalert(this)">
-						<span class="checkmark"id="cover"></span><br>
-                                                </form>
+                                                <span class="checkmark"id="cover"></span><br>
+                                                <input type="submit" value="Submit">
                                     </label> </div>
                                     </div>
                                     <div class="job-info-block">
                                         <div class="job-date">{{ date[i] }}</div>
                                     <div class="user-email">{{ requestors[i] }}</div>
                                     </div>
+                                    </div>
+                                    </form>
                                 </div>
                                 </li>
                             {% endif %}
@@ -103,20 +109,23 @@
                         {% for i in range(num_tickets) %}
                             {% if subject[i] == 'PRINTING ON PRINTER 2' %}
                                 <li>
-                                    <div class="job-block" id="new-job-test">
-                                        <div class="job-name-block">
-                                   <div class="job-name">{{ ticket_number[i] }}</div>
+                                   <div class="job-block" id="new-job-test">
+                                    <form action="#" onchange="myFuncCheck(this)">
+                                    <div id="checked">
+                                     <div class="job-name-block">
+                                    <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
                                     <div> <label class="container">
-                                                <form action="../static/checkbox.js">
                                                 <input type="checkbox"id="cbox" onchange="doalert(this)">
-						<span class="checkmark"id="cover"></span><br>
-                                                </form>
+                                                <span class="checkmark"id="cover"></span><br>
+                                                <input type="submit" value="Submit">
                                     </label> </div>
                                     </div>
                                     <div class="job-info-block">
                                         <div class="job-date">{{ date[i] }}</div>
                                     <div class="user-email">{{ requestors[i] }}</div>
                                     </div>
+                                    </div>
+                                    </form>
                                 </div>
                                 </li>
                             {% endif %}
@@ -130,19 +139,22 @@
                             {% if subject[i] == 'PRINTING ON PRINTER 3' %}
                                 <li>
                                     <div class="job-block" id="new-job-test">
-                                        <div class="job-name-block">
-                                   <div class="job-name">{{ ticket_number[i] }}</div>
+                                    <form action="#" onchange="myFuncCheck(this)">
+                                    <div id="checked">
+                                     <div class="job-name-block">
+                                    <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
                                     <div> <label class="container">
-                                                <form action="../static/checkbox.js">
                                                 <input type="checkbox"id="cbox" onchange="doalert(this)">
-						<span class="checkmark"id="cover"></span><br>
-                                                </form>
+                                                <span class="checkmark"id="cover"></span><br>
+                                                <input type="submit" value="Submit">
                                     </label> </div>
                                     </div>
                                     <div class="job-info-block">
                                         <div class="job-date">{{ date[i] }}</div>
                                     <div class="user-email">{{ requestors[i] }}</div>
                                     </div>
+                                    </div>
+                                    </form>
                                 </div>
                                 </li>
                             {% endif %}
@@ -156,19 +168,22 @@
                             {% if subject[i] == 'PRINTING ON PRINTER 4' %}
                                 <li>
                                     <div class="job-block" id="new-job-test">
-                                        <div class="job-name-block">
-                                   <div class="job-name">{{ ticket_number[i] }}</div>
+                                    <form action="#" onchange="myFuncCheck(this)">
+                                    <div id="checked">
+                                     <div class="job-name-block">
+                                    <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
                                     <div> <label class="container">
-                                                <form action="../static/checkbox.js">
                                                 <input type="checkbox"id="cbox" onchange="doalert(this)">
-						<span class="checkmark"id="cover"></span><br>
-                                                </form>
+                                                <span class="checkmark"id="cover"></span><br>
+                                                <input type="submit" value="Submit">
                                     </label> </div>
                                     </div>
                                     <div class="job-info-block">
                                         <div class="job-date">{{ date[i] }}</div>
                                     <div class="user-email">{{ requestors[i] }}</div>
                                     </div>
+                                    </div>
+                                    </form>
                                 </div>
                                 </li>
                             {% endif %}
@@ -185,20 +200,23 @@
                         {% for i in range(num_tickets) %}
                             {% if subject[i] == 'IN CLEANING TANK 1' %}
                                 <li>
-                                    <div class="job-block" id="new-job-test">
-                                        <div class="job-name-block">
-                                  <div class="job-name">{{ ticket_number[i] }}</div>
+                                  <div class="job-block" id="new-job-test">
+                                    <form action="#" onchange="myFuncCheck(this)">
+                                    <div id="checked">
+                                     <div class="job-name-block">
+                                    <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
                                     <div> <label class="container">
-                                                <form action="../static/checkbox.js">
                                                 <input type="checkbox"id="cbox" onchange="doalert(this)">
-						<span class="checkmark"id="cover"></span><br>
-                                                </form>
+                                                <span class="checkmark"id="cover"></span><br>
+                                                <input type="submit" value="Submit">
                                     </label> </div>
                                     </div>
                                     <div class="job-info-block">
                                         <div class="job-date">{{ date[i] }}</div>
                                     <div class="user-email">{{ requestors[i] }}</div>
                                     </div>
+                                    </div>
+                                    </form>
                                 </div>
                                 </li>
                             {% endif %}
@@ -211,20 +229,23 @@
                         {% for i in range(num_tickets) %}
                             {% if subject[i] == 'IN CLEANING TANK 2' %}
                                 <li>
-                                    <div class="job-block" id="new-job-test">
-                                        <div class="job-name-block">
-                                    <div class="job-name">{{ ticket_number[i] }}</div>
+                                   <div class="job-block" id="new-job-test">
+                                    <form action="#" onchange="myFuncCheck(this)">
+                                    <div id="checked">
+                                     <div class="job-name-block">
+                                    <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
                                     <div> <label class="container">
-                                                <form action="../static/checkbox.js">
                                                 <input type="checkbox"id="cbox" onchange="doalert(this)">
-						<span class="checkmark"id="cover"></span><br>
-                                                </form>
+                                                <span class="checkmark"id="cover"></span><br>
+                                                <input type="submit" value="Submit">
                                     </label> </div>
                                     </div>
                                     <div class="job-info-block">
                                         <div class="job-date">{{ date[i] }}</div>
                                     <div class="user-email">{{ requestors[i] }}</div>
                                     </div>
+                                    </div>
+                                    </form>
                                 </div>
                                 </li>
                             {% endif %}
@@ -238,19 +259,22 @@
                             {% if subject[i] == 'IN CLEANING TANK 3' %}
                                 <li>
                                     <div class="job-block" id="new-job-test">
-                                        <div class="job-name-block">
-                                    <div class="job-name">{{ ticket_number[i] }}</div>
+                                    <form action="#" onchange="myFuncCheck(this)">
+                                    <div id="checked">
+                                     <div class="job-name-block">
+                                    <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
                                     <div> <label class="container">
-                                                <form action="../static/checkbox.js">
                                                 <input type="checkbox"id="cbox" onchange="doalert(this)">
-						<span class="checkmark"id="cover"></span><br>
-                                                </form>
+                                                <span class="checkmark"id="cover"></span><br>
+                                                <input type="submit" value="Submit">
                                     </label> </div>
                                     </div>
                                     <div class="job-info-block">
                                         <div class="job-date">{{ date[i] }}</div>
                                     <div class="user-email">{{ requestors[i] }}</div>
                                     </div>
+                                    </div>
+                                    </form>
                                 </div>
                                 </li>
                             {% endif %}
