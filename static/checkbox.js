@@ -50,7 +50,15 @@ function getCheckedBoxes(checkboxElem) {
 }
 
 function myFuncCheck(theForm){
+	console.log("here");
+	console.log(theForm.innerHTML); 
+	var ticketId = theForm.innerText.substring(0, 5); 
+	console.log(ticketId); 
+	//console.log(ticketId.innerHTML); 
+	//document.getElementById("checked").setAttribute("id","color"); 
+	//have the ticketid -> 
 	
+	//console.log(theForm); 
 }
 
 // Call as
