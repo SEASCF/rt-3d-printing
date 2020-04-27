@@ -296,14 +296,13 @@
                             {% if subject[i] == 'READY FOR PICKUP' %}
                                 <li>
                                     <div class="job-block" id="new-job-test">
+			            <form action="../static/checkbox.js" onsubmit="myFuncCheck(this)">
 				    <div id="checked">
-                                        <div class="job-name-block">
+                                     <div class="job-name-block">
                                     <div class="job-name">{{ ticket_number[i] }}</div>
                                     <div> <label class="container">
-                                                <form action="../static/checkbox.js">
                                                 <input type="checkbox"id="cbox" onchange="doalert(this)">
 						<span class="checkmark"id="cover"></span><br>
-                                                </form>
                                     </label> </div>
                                     </div>
                                     <div class="job-info-block">
@@ -311,6 +310,7 @@
                                     <div class="user-email">{{ requestors[i] }}</div>
                                     </div>
                                     </div>
+				    </form>
 				</div>
                                 </li>
                             {% endif %}

@@ -23,10 +23,12 @@ function doalert(checkboxElem) {
 	//document.getElementById("color").setAttribute("id","checked");
   }
   for(var i=0; i<fruits.length;i++){
+	document.getElementById(fruits[i].id).setAttribute("id","color");   
 	//change id
   }
   for(var j=0; j<notFruits.length;j++){
 	//reset id
+	document.getElementById(notFruits[j].id).setAttribute("id","checked"); 
   }
   console.log(fruits); 
 }
