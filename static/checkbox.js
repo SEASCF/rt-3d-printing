@@ -50,15 +50,30 @@ function getCheckedBoxes(checkboxElem) {
 }
 
 function myFuncCheck(theForm){
-	console.log("here");
-	console.log(theForm.innerHTML); 
 	var ticketId = theForm.innerText.substring(0, 5); 
-	console.log(ticketId); 
+	console.log(ticketId);
+        
+	var idTags = document.getElementsByTagName("div"); 
+	var searchText = ticketId; 
+	var found; 
+
+	for (var i = 0; i < idTags.length; i++) { 
+ 		 if (idTags[i].textContent === searchText) {
+  		 	found = idTags[i];
+			console.log(found); 
+   		 	break;
+  		}
+	}
+	if(found.id == "color") {
+		found.id="job-name"
+	}
+	else{
+		found.id="color";
+	}
 	//console.log(ticketId.innerHTML); 
-	//document.getElementById("checked").setAttribute("id","color"); 
-	//have the ticketid -> 
+	console.log(found.innerText); 
+	console.log(found.id);  //).setAttribute("id","color"); 
 	
-	//console.log(theForm); 
 }
 
 // Call as

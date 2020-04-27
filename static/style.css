@@ -211,6 +211,7 @@ h4.jobs-list-heading{
 }
 
 .job-name-block{
+	color:black; 
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -324,7 +325,8 @@ a{
 	 width:16px; 
 }
 #color{
-	background-color:gray; 
+	background-color:gray;
+       text-decoration:line-through; 	
 }
 /* Full-width input fields */
 input[type=text] {
