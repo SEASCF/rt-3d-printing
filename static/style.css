@@ -112,6 +112,11 @@ ul {
 /**********************************************************
 Body Section Styles
 ***********************************************************/
+#color{ 
+        /*background-color:gray;*/
+       text-decoration:line-through;
+}
+
 table{
 	width: 100%; 
 }
@@ -324,10 +329,6 @@ a{
 	 height:16px; 
 	 width:16px; 
 }
-#color{
-	/*background-color:gray;*/
-       text-decoration:line-through; 	
-}
 /* Full-width input fields */
 input[type=text] {
   width: 100%;
@@ -411,4 +412,41 @@ span.psw {
         width: 100%;
         background-color: green;
         color: white;
+}
+
+#complete-jobs-list #color{
+        /*background-color:gray;*/
+       text-decoration:none;
+}
+#cleaningtank-3-list #color{
+        /*background-color:gray;*/
+       text-decoration:none;
+}
+#cleaningtank-2-list #color{
+        /*background-color:gray;*/
+       text-decoration:none;
+}
+#cleaningtank-1-list #color{
+        /*background-color:gray;*/
+       text-decoration:none;
+}
+#printer-4-list #color{
+        /*background-color:gray;*/
+       text-decoration:none;
+}
+#printer-3-list #color{
+        /*background-color:gray;*/
+       text-decoration:none;
+}
+#printer-2-list #color{
+        /*background-color:gray;*/
+       text-decoration:none;
+}
+#printer-1-list #color{
+        /*background-color:gray;*/
+       text-decoration:none;
+}
+#new-jobs-list #color{
+        /*background-color:gray;*/
+       text-decoration:none;
 }

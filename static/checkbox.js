@@ -51,12 +51,10 @@ function getCheckedBoxes(checkboxElem) {
 
 function myFuncCheck(theForm){
 	var ticketId = theForm.innerText.substring(0, 5); 
-	console.log(ticketId);
-        
 	var idTags = document.getElementsByTagName("div"); 
 	var searchText = ticketId; 
 	var found; 
-
+	console.log(idTags); 
 	for (var i = 0; i < idTags.length; i++) { 
  		 if (idTags[i].textContent === searchText) {
   		 	found = idTags[i];
@@ -70,9 +68,7 @@ function myFuncCheck(theForm){
 	else{
 		found.id="color";
 	}
-	//console.log(ticketId.innerHTML); 
-	console.log(found.innerText); 
-	console.log(found.id);  //).setAttribute("id","color"); 
+	console.log(theForm); 
 	
 }
 
