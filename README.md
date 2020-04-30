@@ -16,4 +16,8 @@ run ``` gunicorn3 --workers=3 flask_app:app ``` while in the repo
 * if you get the error that the server is in use but no one is using it...
 ``` sudo fuser -k 8000/tcp ```
 
+# credits
+* Art from Stackoverflow for refresh code -> https://stackoverflow.com/users/330617/art
+
+
 
