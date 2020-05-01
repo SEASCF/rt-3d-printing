@@ -1,39 +1,6 @@
 
-var fruits = [];
-var notFruits = []; 
 var checkedBoxes = [];
-function doalert(checkboxElem) {
-  if (checkboxElem.checked) {
-	alert("checked")
-// 	fruits.push(checkboxElem);
-// 	var needToRemove = notFruits.includes(checkboxElem);
-// 	 if(needToRemove===true){
-// 		//remove from notFruits
-// 		var index = notFruits.indexOf(checkboxElem);
-// 		 notFruits.splice(index,1); 
-// 	}
-	//document.getElementById("checked").setAttribute("id","color");   
-  } else {
-       alert("notchecked")
-//        notFruits.push(checkboxElem); 
-//         var needToRemove = fruits.includes(checkboxElem);
-//         if(needToRemove===true){
-//                 //remove from fruits
-//                  var index = fruits.indexOf(checkboxElem);
-// 		fruits.splice(index,1); 
-//         }
-	//document.getElementById("color").setAttribute("id","checked");
-  }
-//   for(var i=0; i<fruits.length;i++){
-// 	document.getElementById(fruits[i].id).setAttribute("id","color");   
-// 	//change id
-//   }
-//   for(var j=0; j<notFruits.length;j++){
-// 	//reset id
-// 	document.getElementById(notFruits[j].id).setAttribute("id","checked"); 
-//   }
-//   console.log(fruits); 
-}
+
 // Pass the checkbox name to the function
 function getCheckedBoxes(checkboxElem) {
   var checkboxes = document.getElementsByName(checkboxElem);
