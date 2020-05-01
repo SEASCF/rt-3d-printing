@@ -26,7 +26,7 @@
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
             var x = ui.item[0].innerText;
             $.post( "/api/updateTicket", {
-              new_queue: "READY FOR PICKUP - ",
+              new_queue: "",
               ticket_num: x.substring(0, 5)
             });
             console.log("ticket num: " + x.substring(0, 5));
@@ -53,7 +53,7 @@
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
             var x = ui.item[0].innerText;
             $.post( "/api/updateTicket", {
-              new_queue: "READY FOR PICKUP - ",
+              new_queue: "PRINTING ON PRINTER 1 -",
               ticket_num: x.substring(0, 5)
             });
             console.log("ticket num: " + x.substring(0, 5));
@@ -84,7 +84,7 @@
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
             var x = ui.item[0].innerText;
             $.post( "/api/updateTicket", {
-              new_queue: "READY FOR PICKUP - ",
+              new_queue: "PRINTING ON PRINTER 2 -",
               ticket_num: x.substring(0, 5)
             });
             console.log("ticket num: " + x.substring(0, 5));
@@ -114,7 +114,7 @@
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
             var x = ui.item[0].innerText;
             $.post( "/api/updateTicket", {
-              new_queue: "READY FOR PICKUP - ",
+              new_queue: "PRINTING ON PRINTER 3 -",
               ticket_num: x.substring(0, 5)
             });
             console.log("ticket num: " + x.substring(0, 5));
@@ -144,7 +144,7 @@
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
             var x = ui.item[0].innerText;
             $.post( "/api/updateTicket", {
-              new_queue: "READY FOR PICKUP - ",
+              new_queue: "PRINTING ON PRINTER 4 -",
               ticket_num: x.substring(0, 5)
             });
             console.log("ticket num: " + x.substring(0, 5));
@@ -175,7 +175,7 @@
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
             var x = ui.item[0].innerText;
             $.post( "/api/updateTicket", {
-              new_queue: "READY FOR PICKUP - ",
+              new_queue: "IN CLEANING TANK 1 -",
               ticket_num: x.substring(0, 5)
             });
             console.log("ticket num: " + x.substring(0, 5));
@@ -205,7 +205,7 @@
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
             var x = ui.item[0].innerText;
             $.post( "/api/updateTicket", {
-              new_queue: "READY FOR PICKUP - ",
+              new_queue: "IN CLEANING TANK 2 -",
               ticket_num: x.substring(0, 5)
             });
             console.log("ticket num: " + x.substring(0, 5));
@@ -235,7 +235,7 @@
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
             var x = ui.item[0].innerText;
             $.post( "/api/updateTicket", {
-              new_queue: "READY FOR PICKUP - ",
+              new_queue: "IN CLEANING TANK 3 -",
               ticket_num: x.substring(0, 5)
             });
             console.log("ticket num: " + x.substring(0, 5));
@@ -267,7 +267,7 @@
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
             var x = ui.item[0].innerText;
             $.post( "/api/updateTicket", {
-              new_queue: "READY FOR PICKUP - ",
+              new_queue: "DRYING -",
               ticket_num: x.substring(0, 5)
             });
             console.log("ticket num: " + x.substring(0, 5));
@@ -298,7 +298,7 @@
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
             var x = ui.item[0].innerText;
             $.post( "/api/updateTicket", {
-              new_queue: "READY FOR PICKUP - ",
+              new_queue: "READY FOR PICKUP -",
               ticket_num: x.substring(0, 5)
             });
             console.log("ticket num: " + x.substring(0, 5));
