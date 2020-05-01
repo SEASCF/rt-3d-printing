@@ -10,15 +10,13 @@
           out: function( event, ui ) { //event is triggered when a sortable item is moved away from a sortable list.
             $('#new-jobs').css('background-color', 'rgba(0,0,0,.0)')
           },
-	  update: function(event, ui) {
-		 window.location.reload(true); 
-	  }, 
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
             var x = ui.item[0].innerText;
             $.post( "/api/updateTicket", {
               new_queue: "",
               ticket_num: x.substring(0, 5)
             });
+            window.location.reload(true); 
             console.log("ticket num: " + x.substring(0, 5));
           },
           revert: 100,
