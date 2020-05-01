@@ -347,7 +347,7 @@ input[type=text] {
   border: none;
   cursor: pointer;
   float:right;
-  margin-right:20px; 
+  margin-right:5px; 
 }
 
 .login-button:hover {
@@ -404,11 +404,6 @@ span.psw {
 .bug-button{
         background-color: red;
         color: white;
-	 font: 14px "Lato";
-}
-.admin-button{
-        float: right;
-        margin-right: 5px;
 	 font: 14px "Lato";
 }
 .close-btn{
