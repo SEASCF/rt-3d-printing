@@ -103,5 +103,24 @@ def updateTicket():
 
     return queue
 
+@app.route("/api/closeTickets", methods=['POST'])
+def closeTickets():
+    ticket_nums = request.form['ticket_nums']
+    ticket_numbers = json.loads(ticket_nums)
+
+    print("ticket numbers = " + ticket_numbers[0])
+
+    for i in range(0, len(ticket_numbers)):
+        # steal ticket
+        tracker.steal(ticket_id=ticket_numbers[i])
+
+        # resolve ticket
+        tracker.edit_ticket(ticket_id=ticket_numbers[i], Status = "Resolved")
+    
+    populate()
+    
+    return ""
+
+
 if __name__ == '__main__':
     app.run(debug=True)

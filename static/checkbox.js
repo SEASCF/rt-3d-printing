@@ -1,5 +1,7 @@
+
 var fruits = [];
 var notFruits = []; 
+var checkedBoxes = [];
 function doalert(checkboxElem) {
   if (checkboxElem.checked) {
 	alert("checked")
@@ -65,10 +67,12 @@ function myFuncCheck(theForm){
   		}
 	}
 	if(found.id == "color") {
-		found.id="job-name"
+		found.id="job-name";
+		checkedBoxes.pop((found.innerText).substring(0,5));
 	}
 	else{
 		found.id="color";
+		checkedBoxes.push((found.innerText).substring(0,5));
 	}
 	//console.log(ticketId.innerHTML); 
 	console.log(found.innerText); 
@@ -76,5 +80,11 @@ function myFuncCheck(theForm){
 	
 }
 
-// Call as
-//var checkedBoxes = getCheckedBoxes("mycheckboxes");
+function sendCheckedBoxes() {
+
+	$.post( "/api/closeTickets", {
+		ticket_nums: JSON.stringify(checkedBoxes)
+	});
+
+	window.location.reload(true);
+}

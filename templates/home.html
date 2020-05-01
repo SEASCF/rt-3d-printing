@@ -19,7 +19,6 @@
     <script src="{{ url_for('static', filename='test.js') }}"></script></body>
     <script src="{{ url_for('static', filename='refresh.js') }}"></script></body>
     <script src="{{ url_for('static', filename='checkbox.js') }}"></script></body>
-
     <script src="{{ url_for('static', filename='login.js') }}"></script></body>
 </head>
 
@@ -346,7 +345,10 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="jobs-list-footer"><button class="close-btn">Close all Picked Up Tickets</button>
+                <div class="jobs-list-footer">
+                    <form action="#" onclick="sendCheckedBoxes()">
+                        <button class='close-btn'>Close all Picked Up Tickets</button>
+                    </form>
 		</div>
             </div>
         </div>
