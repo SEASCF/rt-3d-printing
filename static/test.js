@@ -17,7 +17,6 @@
               ticket_num: x.substring(0, 5)
             });
             window.location.reload(true); 
-            console.log("ticket num: " + x.substring(0, 5));
           },
           revert: 100,
           start: function( event, ui ) { //event is triggered when sorting starts.
@@ -44,7 +43,6 @@
               new_queue: "PRINTING ON PRINTER 1 -",
               ticket_num: x.substring(0, 5)
             });
-            console.log("ticket num: " + x.substring(0, 5));
             $('#in-progress1').css('background-color', 'rgba(0,0,0,.0)')
           },
           revert: 100,
@@ -75,7 +73,6 @@
               new_queue: "PRINTING ON PRINTER 2 -",
               ticket_num: x.substring(0, 5)
             });
-            console.log("ticket num: " + x.substring(0, 5));
             $('#in-progress2').css('background-color', 'rgba(0,0,0,.0)')
           },
           revert: 100,
@@ -105,7 +102,6 @@
               new_queue: "PRINTING ON PRINTER 3 -",
               ticket_num: x.substring(0, 5)
             });
-            console.log("ticket num: " + x.substring(0, 5));
             $('#in-progress3').css('background-color', 'rgba(0,0,0,.0)')
           },
           revert: 100,
@@ -135,7 +131,6 @@
               new_queue: "PRINTING ON PRINTER 4 -",
               ticket_num: x.substring(0, 5)
             });
-            console.log("ticket num: " + x.substring(0, 5));
             $('#in-progress4').css('background-color', 'rgba(0,0,0,.0)')
           },
           revert: 100,
@@ -166,7 +161,6 @@
               new_queue: "IN CLEANING TANK 1 -",
               ticket_num: x.substring(0, 5)
             });
-            console.log("ticket num: " + x.substring(0, 5));
             $('#waiting1').css('background-color', 'rgba(0,0,0,.0)')
           },
           revert: 100,
@@ -196,7 +190,6 @@
               new_queue: "IN CLEANING TANK 2 -",
               ticket_num: x.substring(0, 5)
             });
-            console.log("ticket num: " + x.substring(0, 5));
             $('#waiting2').css('background-color', 'rgba(0,0,0,.0)')
           },
           revert: 100,
@@ -226,8 +219,6 @@
               new_queue: "IN CLEANING TANK 3 -",
               ticket_num: x.substring(0, 5)
             });
-            console.log("ticket num: " + x.substring(0, 5));
-
             $('#waiting3').css('background-color', 'rgba(0,0,0,.0)')
 
           },
@@ -258,7 +249,6 @@
               new_queue: "DRYING -",
               ticket_num: x.substring(0, 5)
             });
-            console.log("ticket num: " + x.substring(0, 5));
             var status = 'Complete';
             var orderId = ui.item["0"].firstChild.id;
           },
@@ -289,7 +279,6 @@
               new_queue: "READY FOR PICKUP -",
               ticket_num: x.substring(0, 5)
             });
-            console.log("ticket num: " + x.substring(0, 5));
           },
           revert: 100,
         });

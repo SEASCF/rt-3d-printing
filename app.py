@@ -79,6 +79,7 @@ def updateTicket():
     ticket_number = request.form['ticket_num']
 
     valid_subj = ['PRINTING ON PRINTER 1 -', 'PRINTING ON PRINTER 2 -', 'PRINTING ON PRINTER 3 -', 'PRINTING ON PRINTER 4 -', 'IN CLEANING TANK 1 -', 'IN CLEANING TANK 2 -', 'IN CLEANING TANK 3 -', 'DRYING -', 'READY FOR PICKUP -']
+    email = "Hello,\n\nYour print is ready for pickup from Tompkins 401. Please visit our office at your earliest convenience to retreive your print. Our hours are: \nMonday-Friday: 8am-1am\nSaturday-Sunday: 10am-10pm\n\nThank you,\nSEASCF"
 
     t = tracker.get_ticket(ticket_number)
     prev_owner = t['Owner']
@@ -101,6 +102,9 @@ def updateTicket():
     else:
         split_subj = prev_subject.split('-')
         tracker.edit_ticket(ticket_id=ticket_number, Subject= (queue + split_subj[1] + "-" + split_subj[2] + "-" + split_subj[3]))   
+
+    if queue == "READY FOR PICKUP -":
+        tracker.reply(ticket_id=ticket_number, text= email)
 
     # give ticket back to original owner
     tracker.edit_ticket(ticket_id=ticket_number, Owner=prev_owner)
