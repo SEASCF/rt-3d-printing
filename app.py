@@ -1,9 +1,12 @@
 from flask import Flask, render_template, url_for, request
-import json, rt
+from dotenv import load_dotenv, find_dotenv
+import json, rt, os
+
+load_dotenv(find_dotenv())
 
 app = Flask(__name__)
 
-tracker = rt.Rt('https://ticket.seas.gwu.edu/rt/REST/1.0/', '3dprintingtest', 'changeme', verify_cert=False)
+tracker = rt.Rt('https://ticket.seas.gwu.edu/rt/REST/1.0/', os.getenv("USERNAME"), os.getenv("PASSWORD"), verify_cert=False)
 try:
     tracker.login()
 
@@ -88,10 +91,9 @@ def updateTicket():
             detect_subj = i
 
     # steal ticket
-    if prev_owner != "3dprintingtest":
+    if prev_owner != os.getenv("USERNAME"):
         tracker.steal(ticket_id=ticket_number)
         
-
     # update the subject
     if detect_subj == -1:
         split_subj = prev_subject.split('-')
