@@ -403,15 +403,18 @@ span.psw {
 .bug-button{
         background-color: red;
         color: white;
+	 font: 14px "Lato";
 }
 .admin-button{
         float: right;
         margin-right: 5px;
+	 font: 14px "Lato";
 }
 .close-btn{
         width: 100%;
         background-color: green;
         color: white;
+	 font: 14px "Lato";
 }
 
 #complete-jobs-list #color{
