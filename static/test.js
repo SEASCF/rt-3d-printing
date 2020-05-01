@@ -11,17 +11,7 @@
             $('#new-jobs').css('background-color', 'rgba(0,0,0,.0)')
           },
 	  update: function(event, ui) {
-		  var ids= []; 
-		  var y = $("#new-jobs-list")[0]; 
-		  console.log(y);
-		  var count =y.childElementCount; 
-		  var i; 
-		  for( i=0; i<count; ++i){
-			var id = y.children[i].innerText.substring(0, 5); 
-			ids.push(id); 
-	          }
-		  ids.sort(); 
-		  console.log(ids); 
+		 window.location.reload(true);
 	  }, 
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
             var x = ui.item[0].innerText;
