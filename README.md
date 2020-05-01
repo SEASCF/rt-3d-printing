@@ -6,6 +6,7 @@ A web app that simplifies the 3d printing process for lab techs
 * python 3
 * flask
 * rt
+* python-dotenv
 
 # how do? 
 ``` ssh rebeccalshanley@3dtrack.seas.gwu.edu ```  
