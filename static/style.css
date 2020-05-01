@@ -341,6 +341,7 @@ input[type=text] {
 
 /* Set a style for all buttons */
 .login-button {
+  font: 14px "Lato";
   background-color: blue;
   color: white;
   border: none;
@@ -452,4 +453,7 @@ span.psw {
 #new-jobs-list #color{
         /*background-color:gray;*/
        text-decoration:none;
+}
+#first-queue{
+	font-weight:bold; 
 }
