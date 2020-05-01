@@ -88,7 +88,10 @@ def updateTicket():
             detect_subj = i
 
     # steal ticket
-    tracker.steal(ticket_id=ticket_number)
+    if prev_owner == "3dprintingtest":
+        continue
+    else:
+        tracker.steal(ticket_id=ticket_number)
 
     # update the subject
     if detect_subj == -1:
