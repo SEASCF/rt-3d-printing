@@ -11,28 +11,7 @@
             $('#new-jobs').css('background-color', 'rgba(0,0,0,.0)')
           },
 	  update: function(event, ui) {
-		 window.location.reload(true);
-		 var y = $( "#new-jobs-list" )[0]; 
-		  var x = y.children[0];
-		  console.log(y); 
-		  console.log(x);
-		  var id = x.innerText.substring(0,5);
-		  console.log(id);
-		   var idTags = document.getElementsByTagName("div");
-               	var searchText = id;
-       		 var found;
-       		 
-        	for (var i = 0; i < idTags.length; i++) {
-                	 if (idTags[i].textContent === searchText) {
-                        	found = idTags[i];
-                        	console.log(found);
-                       		 break;
-                	}
-       		 }
-		 if(found.id=="job-name"){
-			found.id="first-queue";
-		 }
-		  //document.getElementsByClassName(x.className).setAttribute("id","first-queue");  
+		 window.location.reload(true); 
 	  }, 
           receive: function( event, ui ) { // event is triggered when an item from a connected sortable list has been dropped into another list
             var x = ui.item[0].innerText;

@@ -454,6 +454,6 @@ span.psw {
         /*background-color:gray;*/
        text-decoration:none;
 }
-#first-queue{
-	font-weight:bold; 
+#new-jobs-list li:first-child {
+  font-weight: bold;
 }
