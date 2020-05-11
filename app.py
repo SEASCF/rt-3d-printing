@@ -2,26 +2,34 @@ from flask import Flask, render_template, url_for, request
 from dotenv import load_dotenv, find_dotenv
 import json, rt, os
 
+# get login info from .env
 load_dotenv(find_dotenv())
 
+# initialize flask app
 app = Flask(__name__)
 
+# initialize tracker object 
 tracker = rt.Rt('https://ticket.seas.gwu.edu/rt/REST/1.0/', os.getenv("USERNAME"), os.getenv("PASSWORD"), verify_cert=False)
 try:
     tracker.login()
-
 except Exception as e:
     print("Could not log in, error: " + e)
-
 else:
     print("Successfully logged in.")
 
+'''
+    populate is the function that is called on refresh/initial loading of page.
+'''
 @app.route("/api/populate")
 @app.route("/")
 def populate():
+    # retreive all open and new 3D printing tickets
     tickets = tracker.search(Queue='3 D printing', Status='open', Format= 's')
     tickets.extend(tracker.search(Queue='3 D printing', Status='new', Format= 's'))
-    valid_subj = ['PRINTING ON PRINTER 1', 'PRINTING ON PRINTER 2', 'PRINTING ON PRINTER 3', 'PRINTING ON PRINTER 4', 'IN CLEANING TANK 1', 'IN CLEANING TANK 2', 'IN CLEANING TANK 3', 'DRYING', 'READY FOR PICKUP',]
+
+    # the following are valid subjects for a 3d print request ticket to have
+    valid_subj = ['PRINTING ON PRINTER 1', 'PRINTING ON PRINTER 2', 'PRINTING ON PRINTER 3', 'PRINTING ON PRINTER 4', 'IN CLEANING TANK 1', 'IN CLEANING TANK 2', 'IN CLEANING TANK 3', 'DRYING', 'READY FOR PICKUP']
+
     requestors = []
     date = []
     ticket_number = []
@@ -73,10 +81,16 @@ def populate():
     # send all of these formatted lists to the html file to populate the board
     return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date, subject=subj, num_tickets=len(tickets))
 
+'''
+    updateTicket will be triggered when a card is dragged to a new column.
+    it will update the subject in rt to whichever column it was dragged to.
+'''
 @app.route("/api/updateTicket", methods=['POST'])
 def updateTicket():
-    queue = request.form['new_queue']
+    # GET the ticket number from the card that was dragged
     ticket_number = request.form['ticket_num']
+    # GET the column that the card was dragged onto
+    queue = request.form['new_queue']
 
     valid_subj = ['PRINTING ON PRINTER 1 -', 'PRINTING ON PRINTER 2 -', 'PRINTING ON PRINTER 3 -', 'PRINTING ON PRINTER 4 -', 'IN CLEANING TANK 1 -', 'IN CLEANING TANK 2 -', 'IN CLEANING TANK 3 -', 'DRYING -', 'READY FOR PICKUP -']
     email = "Hello,\n\nYour print is ready for pickup from Tompkins 401. Please visit our office at your earliest convenience to retreive your print. Our hours are: \nMonday-Friday: 8am-1am\nSaturday-Sunday: 10am-10pm\n\nThank you,\nSEASCF"
@@ -101,8 +115,9 @@ def updateTicket():
         tracker.edit_ticket(ticket_id=ticket_number, Subject= (queue + split_subj[0] + "-" + split_subj[1] + "-" + split_subj[2]))   
     else:
         split_subj = prev_subject.split('-')
-        tracker.edit_ticket(ticket_id=ticket_number, Subject= (queue + split_subj[1] + "-" + split_subj[2] + "-" + split_subj[3]))   
-
+        tracker.edit_ticket(ticket_id=ticket_number, Subject= (queue + split_subj[1] + "-" + split_subj[2] + "-" + split_subj[3]))
+        
+    # send an email to the tickets dragged into the last column
     if queue == "READY FOR PICKUP -":
         tracker.reply(ticket_id=ticket_number, text= email)
 
@@ -111,12 +126,17 @@ def updateTicket():
 
     return queue
 
+'''
+    closeTickets is called when the button on the Ready for Pickup column
+    is pressed. It checks which tickets are "checked" to be closed, and closes
+    them.
+'''
 @app.route("/api/closeTickets", methods=['POST'])
 def closeTickets():
+    # GET tickets that are currently checked to be closed
     ticket_nums = request.form['ticket_nums']
+    # JS sends the request weird so we use json.loads to fix that
     ticket_numbers = json.loads(ticket_nums)
-
-    print("ticket numbers = " + ticket_numbers[0])
 
     for i in range(0, len(ticket_numbers)):
         # steal ticket
@@ -125,6 +145,7 @@ def closeTickets():
         # resolve ticket
         tracker.edit_ticket(ticket_id=ticket_numbers[i], Status = "Resolved")
     
+    # after closing tickets, call populate to refresh the page
     populate()
     
     return ""
