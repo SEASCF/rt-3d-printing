@@ -23,7 +23,6 @@ ul {
 	height: 30px;
 	padding: 5px;
 	background-color: rgba(0,0,0,.15);
-
 	box-shadow: 0 1px 1px rgba(0,0,0,.1);
 }
 
@@ -113,7 +112,6 @@ ul {
 Body Section Styles
 ***********************************************************/
 #color{ 
-        /*background-color:gray;*/
        text-decoration:line-through;
 }
 
@@ -183,8 +181,8 @@ h4.jobs-list-heading{
 }
 
 .job-block{
-	background-color: #fff;
-	border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
     border-radius: 3px;
     cursor: pointer;
     display: block;
@@ -404,49 +402,40 @@ span.psw {
 .bug-button{
         background-color: red;
         color: white;
-	 font: 14px "Lato";
+	font: 14px "Lato";
 }
 .close-btn{
         width: 100%;
         background-color: green;
         color: white;
-	 font: 14px "Lato";
+	font: 14px "Lato";
 }
 
 #complete-jobs-list #color{
-        /*background-color:gray;*/
        text-decoration:none;
 }
 #cleaningtank-3-list #color{
-        /*background-color:gray;*/
        text-decoration:none;
 }
 #cleaningtank-2-list #color{
-        /*background-color:gray;*/
        text-decoration:none;
 }
 #cleaningtank-1-list #color{
-        /*background-color:gray;*/
        text-decoration:none;
 }
 #printer-4-list #color{
-        /*background-color:gray;*/
        text-decoration:none;
 }
 #printer-3-list #color{
-        /*background-color:gray;*/
        text-decoration:none;
 }
 #printer-2-list #color{
-        /*background-color:gray;*/
        text-decoration:none;
 }
 #printer-1-list #color{
-        /*background-color:gray;*/
        text-decoration:none;
 }
 #new-jobs-list #color{
-        /*background-color:gray;*/
        text-decoration:none;
 }
 #new-jobs-list li:first-child {
