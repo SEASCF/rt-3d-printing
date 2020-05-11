@@ -1,6 +1,6 @@
 
 var checkedBoxes = [];
-
+//used whenever checked box gets checked
 function myFuncCheck(theForm){
 	var ticketId = theForm.innerText.substring(0, 5); 
 	var idTags = document.getElementsByTagName("div"); 
@@ -14,6 +14,7 @@ function myFuncCheck(theForm){
    		 	break;
   		}
 	}
+	//on check the ticket number gets crossed out 
 	if(found.id == "color") {
 		found.id="job-name";
 		checkedBoxes.pop((found.innerText).substring(0,5));
@@ -23,7 +24,7 @@ function myFuncCheck(theForm){
 		checkedBoxes.push((found.innerText).substring(0,5));
 	}	
 }
-
+//used to closed the checked tickets
 function sendCheckedBoxes() {
 
 	$.post( "/api/closeTickets", {

@@ -1,3 +1,4 @@
+//display the login modal
 function displayModal(){
 	document.getElementById('id01').style.display='block'; 
 	// Get the modal
