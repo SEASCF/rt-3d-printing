@@ -147,7 +147,8 @@ h2.jobs-list-heading{
 	font-family: "Lato";
 	font-size: 12px;
 	font-weight: bold;
-	margin-left: 9px;
+  margin-left: 9px;
+  background-color: #e2e4e6;
 }
 h4.jobs-list-heading{
 	font-family: "Lato";
@@ -238,10 +239,10 @@ h4.jobs-list-heading{
 	font-weight: 700;
 }
 .jobs-list-body.printer{
-	height: 15vh; 
+	height: 14vh; 
 }
 .jobs-list-body.tank{
-	height: 22vh;
+	height: 21vh;
 }
 /* The container */
 .container {
@@ -440,4 +441,22 @@ span.psw {
 }
 #new-jobs-list li:first-child {
   font-weight: bold;
+}
+.box{
+  margin: 5px;
+  border-style: solid;
+  border-color: darkgrey; 
+  border-radius: 10px;
+  background-color: #e2e4e6;
+}
+#has-boxes{
+  background-color: rgba(186, 186, 186, 1.0);
+}
+#has-boxes h2.jobs-list-heading{
+  margin: 5px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 10px;
+  background-color: #e2e4e6;
+  padding-left: 9px;
 }
