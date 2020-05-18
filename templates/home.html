@@ -41,7 +41,8 @@
     <div class="body-section">
         <div class="jobs-list-wrapper">
             <div class="jobs-list">
-                <h2 class="jobs-list-heading">3D Printing Queue</h2>
+                <h2 class="jobs-list-heading"id="first-col">3D Printing Queue</h2>
+                <div class="reg-column">
                 <div class="jobs-list-body" id="new-jobs">
                     <ul id="new-jobs-list">
                         {% for i in range(num_tickets) %}
@@ -68,10 +69,11 @@
                         {% endfor %}
                     </ul>
                 </div>
+            </div>
                 <div class="jobs-list-footer"></div>
             </div>
             <div class="jobs-list" id="has-boxes">
-                <h2 class="jobs-list-heading">Currently Printing</h2>
+                <h2 class="jobs-list-heading" id="second-col">Currently Printing</h2>
                 <div class = "box">
                 <h4 class="jobs-list-heading">Printer 1</h4>
                 <div class="jobs-list-body printer" id="in-progress1">
@@ -191,7 +193,7 @@
                 <div class="jobs-list-footer"></div>
                 </div>
             <div class="jobs-list" id="has-boxes">
-                <h2 class="jobs-list-heading">Cleaning Tanks</h2>
+                <h2 class="jobs-list-heading" id="third-col">Cleaning Tanks</h2>
                 <div class = "box">
                 <h4 class="jobs-list-heading">Tank 1</h4>
                 <div class="jobs-list-body tank" id="waiting1">
@@ -282,7 +284,8 @@
                 <div class="jobs-list-footer"></div>
             </div>
             <div class="jobs-list">
-                <h2 class="jobs-list-heading">Drying</h2>
+                <h2 class="jobs-list-heading"id="fourth-col">Drying</h2>
+                <div class="reg-column">
                 <div class="jobs-list-body" id="complete">
                     <ul id="complete-jobs-list">
                         {% for i in range(num_tickets) %}
@@ -309,10 +312,12 @@
                         {% endfor %}
                     </ul>
                 </div>
+                </div>
                 <div class="jobs-list-footer"></div>
             </div>
             <div class="jobs-list">
-                <h2 class="jobs-list-heading">Ready for Pickup </h2>
+                <h2 class="jobs-list-heading"id="fifth-col">Ready for Pickup </h2>
+                <div class="reg-column">
                 <div class="jobs-list-body" id="rework">
                     <ul id="rework-jobs-list">
                         {% for i in range(num_tickets) %}
@@ -338,6 +343,7 @@
                             {% endif %}
                         {% endfor %}
                     </ul>
+                </div>
                 </div>
                 <div class="jobs-list-footer">
                     <form action="#" onclick="sendCheckedBoxes()">

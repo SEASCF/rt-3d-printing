@@ -139,7 +139,7 @@ table{
 	display: inline-block;
 	vertical-align: top;
 	white-space: nowrap;
-	background-color: #e2e4e6;
+	/* background-color: #e2e4e6; */
 	border-radius: 5px;
 }
 
@@ -401,14 +401,14 @@ span.psw {
   to {transform: scale(1)}
 }
 .bug-button{
-        background-color: red;
-        color: white;
+  background-color: red;
+  color: white;
 	font: 14px "Lato";
 }
 .close-btn{
-        width: 100%;
-        background-color: green;
-        color: white;
+  width: 100%;
+  background-color: green;
+  color: white;
 	font: 14px "Lato";
 }
 
@@ -452,11 +452,35 @@ span.psw {
 #has-boxes{
   background-color: rgba(186, 186, 186, 1.0);
 }
-#has-boxes h2.jobs-list-heading{
+h2.jobs-list-heading{
   margin: 5px;
   border-style: solid;
   border-color: transparent;
   border-radius: 10px;
   background-color: #e2e4e6;
   padding-left: 9px;
+}
+.reg-column{
+  padding: 5px; 
+  border-style: solid;
+  border-color: darkgrey; 
+  border-radius: 10px;
+  background-color: #e2e4e6;
+}
+
+/* header colors */
+#first-col{
+  background-color:#F7D1CD;
+}
+#second-col{
+  background-color:#E8C2CA;
+}
+#third-col{
+  background-color:#D1B3C4;
+}
+#fourth-col{
+  background-color:#B392AC;
+}
+#fifth-col{
+  background-color:#735D78;
 }
