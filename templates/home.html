@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <link href="../static/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>3D Print Tracker</title>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
@@ -14,12 +14,14 @@
             }
         });
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="{{ url_for('static', filename='test.js') }}"></script></body>
     <script src="{{ url_for('static', filename='refresh.js') }}"></script></body>
     <script src="{{ url_for('static', filename='checkbox.js') }}"></script></body>
     <script src="{{ url_for('static', filename='login.js') }}"></script></body>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -48,22 +50,61 @@
                         {% for i in range(num_tickets) %}
                             {% if subject[i] == '' %}
                                 <li>
-                               <div class="job-block" id="new-job-test">
-			                   <form action="#" onchange="myFuncCheck(this)">
-                                            <div class="job-name-block">
-                                                <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
-                                                <div> <label class="container">
-                                                    <input type="checkbox"id="cbox">
-                                                    <span class="checkmark"id="cover"></span><br>
-                                                    <input type="submit" value="Submit">
-                                                </label> </div>
+                                    <div class="modal-container">
+                                        <!-- Trigger the modal with a button -->
+                                        <button type="button" class="btn-modal" data-toggle="modal" data-target="#myModal">
+                                            <div class="job-block" id="new-job-test">
+                                                <form action="#" onchange="myFuncCheck(this)">
+                                                             <div class="job-name-block">
+                                                                 <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
+                                                                 <div> <label class="container">
+                                                                     <input type="checkbox"id="cbox">
+                                                                     <span class="checkmark"id="cover"></span><br>
+                                                                     <input type="submit" value="Submit">
+                                                                 </label> </div>
+                                                             </div>
+                                                             <div class="job-info-block">
+                                                                 <div class="job-date">{{ date[i] }}</div>
+                                                                 <div class="user-email">{{ requestors[i] }}</div>
+                                                             </div>
+                                                     </form>
+                                                 </div>
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal" role="dialog">
+                                          <div class="modal-dialog modal-lg">
+                                            <div class="modal-popup">
+                                              <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Ticket Details</h4>
+                                              </div>
+                                       
+                                              <div class="row">
+                                              <div class="basics col-sm-4">
+                                                  <p>ID: </p><br>
+                                                  <p>Status: </p><br>
+                                                     <p>Queue: </p><br>
+                                                     <p>Priority: </p><br>
+                                              </div>
+                                               <div class= "req col-sm-4">
+                                                   <p>Owner: </p><br>
+                                                      <p>Requestor: </p><br>
+                                                   <p>Date Created: </p><br>
+                                                   <p>Date Updates: </p><br>
+                                              </div>
+                                              </div>
+                                              <div class="row">
+                                              <div class="attach col-sm-12">
+                                                  <p>Attachment: </p><br>
+                                              </div>
+                                              </div>
+                                              <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                              </div>
                                             </div>
-                                            <div class="job-info-block">
-                                                <div class="job-date">{{ date[i] }}</div>
-                                                <div class="user-email">{{ requestors[i] }}</div>
-                                            </div>
-				                    </form>
-				                </div>
+                                          </div>
+                                        </div>
+                                      </div>
                                 </li>
                             {% endif %}
                         {% endfor %}

@@ -183,12 +183,10 @@ h4.jobs-list-heading{
 
 .job-block{
     background-color: #fff;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 0px solid #ccc;
     border-radius: 3px;
     cursor: pointer;
     display: block;
-    margin-bottom: 6px;
-    width: 94%;
     max-width: 300px;
     min-height: 20px;
     position: relative;
@@ -202,7 +200,8 @@ h4.jobs-list-heading{
 
 .job-name{
 	font-family: "Lato";
-	width: 100%;
+  width: 100%;
+  text-align: left;
 }
 
 .job-info-block{
@@ -255,6 +254,7 @@ h4.jobs-list-heading{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  width:15px; 
 }
 
 /* Hide the browser's default checkbox */
@@ -483,4 +483,46 @@ h2.jobs-list-heading{
 }
 #fifth-col{
   background-color:#735D78;
+}
+.row{
+	margin: 0px; 
+    padding: 0px; 
+    width: 878px; 
+}
+.basics{
+	border-style: solid; 
+    border-color: #A31621; 
+    margin: 10px; 
+}
+.req{
+	border-style: solid; 
+    /* border-color: #6096BA;  */
+    margin: 10px;
+    float: right; 
+}
+.attach{
+	border-style: solid; 
+    border-color: #FFBE0B; 
+    margin: 10px;
+}
+a{
+  color: white; 
+}
+
+.modal-backdrop.in {
+  opacity: 0.3; 
+}
+.modal-container{
+  width: 100%; 
+}
+.btn-modal{
+    width: 100%; 
+    padding: 8px;
+}
+.modal.fade{
+  opacity: 1;
+}
+.modal-popup{
+  width:100%;
+  background-color: white; 
 }
