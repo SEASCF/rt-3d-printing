@@ -1,24 +1,28 @@
-# rt-3d-printing
-A web app that simplifies the 3d printing process for lab techs
+# 3D Print Tracker
+A flask app that simplifies the 3D printing process for lab techs at GW SEASCF.
 
-
-# requirements 
+## Installation 
+#### Requirements
+* Python requirements
+*
 * python 3
 * flask
 * rt
 * python-dotenv
 
-# how do? 
-``` ssh rebeccalshanley@3dtrack.seas.gwu.edu ```  
+## Usage
 
-run ``` gunicorn3 --workers=3 flask_app:app ``` while in the repo
+run ``` gunicorn3 --workers=3 flask_app:app ```
 
-# common errors 
-* if you get the error that the server is in use but no one is using it...
-``` sudo fuser -k 8000/tcp ```
 
-# credits
+
+## Common Errors/Report an Issue
+Issues include 
+
+## Credits
 * Art from Stackoverflow for refresh code -> https://stackoverflow.com/users/330617/art
 
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
 

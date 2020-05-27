@@ -1,0 +1,9 @@
+Flask==1.1.1
+Jinja2==2.10.3
+python-dotenv==0.13.0
+requests==2.20.1
+rt==1.0.12
+six==1.11.0
+urllib3==1.24.3
+virtualenv==16.7.9
+

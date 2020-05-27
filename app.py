@@ -17,6 +17,18 @@ except Exception as e:
 else:
     print("Successfully logged in.")
 
+# read in auto-emails
+emails = []
+count = 0
+
+f = open("static/emails.txt", "r")
+
+for x in f:
+    emails[count].append(x)
+    emails[count].append("\n")
+    if x == "~":
+        count += 1
+    
 '''
     populate is the function that is called on refresh/initial loading of page.
 '''
@@ -66,6 +78,8 @@ def populate():
         date[i] = str((date[i])[0:11])
 
     # format subject so it's just the important part
+    #
+    #
     detect_subj = -1
     for i in range(0, len(subj)):
         detect_subj = -1
@@ -93,7 +107,6 @@ def updateTicket():
     queue = request.form['new_queue']
 
     valid_subj = ['PRINTING ON PRINTER 1 -', 'PRINTING ON PRINTER 2 -', 'PRINTING ON PRINTER 3 -', 'PRINTING ON PRINTER 4 -', 'IN CLEANING TANK 1 -', 'IN CLEANING TANK 2 -', 'IN CLEANING TANK 3 -', 'DRYING -', 'READY FOR PICKUP -']
-    email = "Hello,\n\nYour print is ready for pickup from Tompkins 401. Please visit our office at your earliest convenience to retreive your print. Our hours are: \nMonday-Friday: 8am-1am\nSaturday-Sunday: 10am-10pm\n\nThank you,\nSEASCF"
 
     t = tracker.get_ticket(ticket_number)
     prev_owner = t['Owner']
@@ -109,17 +122,16 @@ def updateTicket():
     if prev_owner != os.getenv("USERNAME"):
         tracker.steal(ticket_id=ticket_number)
         
-    # update the subject
+    # update the subject and send update email
     if detect_subj == -1:
         split_subj = prev_subject.split('-')
-        tracker.edit_ticket(ticket_id=ticket_number, Subject= (queue + split_subj[0] + "-" + split_subj[1] + "-" + split_subj[2]))   
+        tracker.edit_ticket(ticket_id=ticket_number, Subject= (queue + split_subj[0] + "-" + split_subj[1] + "-" + split_subj[2]))  
     else:
         split_subj = prev_subject.split('-')
         tracker.edit_ticket(ticket_id=ticket_number, Subject= (queue + split_subj[1] + "-" + split_subj[2] + "-" + split_subj[3]))
-        
-    # send an email to the tickets dragged into the last column
-    if queue == "READY FOR PICKUP -":
-        tracker.reply(ticket_id=ticket_number, text= email)
+
+    t = Timer(30.0, email, queue, ticket_number)
+    t.start()  # after 30 seconds, the email function will be called
 
     # give ticket back to original owner
     tracker.edit_ticket(ticket_id=ticket_number, Owner=prev_owner)
@@ -149,6 +161,23 @@ def closeTickets():
     populate()
     
     return ""
+
+
+'''
+    email sends a correspondence to requestors upon a card being dragged and dropped into
+    a column for longer than 30 seconds. therefore, a requestor will not receive an email
+    if the card is moved 
+'''
+@app.route("/api/email")
+def email(queue, ticket_number):
+    t = tracker.get_ticket(ticket_number)
+   
+    # check to make sure queue still matches ticket
+    if (t['Subject'].split('-'))[0] != queue:
+        return
+    # send an email to the tickets dragged into the last column
+    else:
+        tracker.reply(ticket_id=ticket_number, text = "")
 
 
 if __name__ == '__main__':

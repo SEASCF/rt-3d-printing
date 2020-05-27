@@ -1,0 +1,76 @@
+Print has Started Printing
+----------------------------------------
+3D Printing Request for netID
+Your request is on step 1 of 4
+----------------------------------------
+
+Hello,
+
+Your 3D printing request is now printing! We will continue to monitor the print and will provide additional updates throughout the process.
+
+If you have any questions, please do not hesitate to reply directly to this email to contact one of our Lab Techs.
+ 
+Thank you,
+The SEASCF 3D Printing Team
+(202) 994-0123
+
+~
+
+Print Moved to Cleaning Tank
+----------------------------------------
+3D Printing Request for netID
+Your request is on step 2 of 4
+----------------------------------------
+
+Hello,
+
+Your 3D printing request has finished printing and has been moved to a cleaning tank!
+
+If you have any questions, please do not hesitate to reply directly to this email to contact one of our Lab Techs.
+
+Thank you,
+The SEASCF 3D Printing Team
+(202) 994-0123
+
+~
+
+Print Moved to Drying Racks
+----------------------------------------
+3D Printing Request for netID
+Your request is on step 3 of 4
+----------------------------------------
+
+Hello,
+
+Your 3D printing request has been removed from the cleaning tank and is now drying! We will update you once more when your request is ready for pickup. Please wait for the final email before visiting our office to retrieve your request.
+
+If you have any questions, please do not hesitate to reply directly to this email to contact one of our Lab Techs.
+
+Thank you,
+The SEASCF 3D Printing Team
+(202) 994-0123
+
+~
+
+Print is Ready for Pickup
+----------------------------------------
+3D Printing Request for netID
+Your request is on step 4 of 4
+----------------------------------------
+
+Hello,
+
+Your 3D printing request is ready for pickup! Your request can be retrieved from Tompkins 401 at your earliest convenience.
+
+Our normal operating hours are:
+Mon - Thu:	8am - 1am
+Fri:		8am - 10pm
+Sat - Sun:	10am - 10pm
+Our summer hours are:
+Mon - Fri:	10am - 10pm
+Sat - Sun:	Closed
+If you have any questions, please do not hesitate to reply directly to this email to contact one of our Lab Techs.
+
+Thank you,
+The SEASCF 3D Printing Team
+(202) 994-0123
