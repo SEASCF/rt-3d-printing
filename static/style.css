@@ -297,8 +297,8 @@ h4.jobs-list-heading{
 /* Style the checkmark/indicator */
 .container .checkmark:after {
   left: 5px;
-  top: 2px;
-  width: 4px;
+  top: 4px;
+  width: 6px;
   height: 8px;
   border: solid white;
   border-width: 0 3px 3px 0;
@@ -363,27 +363,28 @@ span.psw {
 }
 
 /* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+/* .modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
   padding-top: 60px;
-}
+} */
 
 /* Modal Content/Box */
-.modal-content {
+/* .modal-content {
   background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  margin: 5% auto 15% auto; 
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
+  width: 80%; 
+} 
+*/
 
 /* Add Zoom Animation */
 .animate {
@@ -405,12 +406,12 @@ span.psw {
   color: white;
 	font: 14px "Lato";
 }
-.close-btn{
+/* .close-btn{
   width: 100%;
   background-color: green;
   color: white;
 	font: 14px "Lato";
-}
+} */
 
 #complete-jobs-list #color{
        text-decoration:none;
@@ -484,7 +485,7 @@ h2.jobs-list-heading{
 #fifth-col{
   background-color:#735D78;
 }
-.row{
+/* .row{
 	margin: 0px; 
     padding: 0px; 
     width: 878px; 
@@ -496,7 +497,6 @@ h2.jobs-list-heading{
 }
 .req{
 	border-style: solid; 
-    /* border-color: #6096BA;  */
     margin: 10px;
     float: right; 
 }
@@ -515,14 +515,13 @@ a{
 .modal-container{
   width: 100%; 
 }
+*/
 .btn-modal{
-    width: 100%; 
-    padding: 8px;
-}
-.modal.fade{
-  opacity: 1;
+  width: 100%;
+  background-color: transparent;
+  border-color: transparent;
 }
 .modal-popup{
   width:100%;
-  background-color: white; 
-}
+  background-color:rgba(255,255,255,1);
+} 
