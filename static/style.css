@@ -485,30 +485,8 @@ h2.jobs-list-heading{
 #fifth-col{
   background-color:#735D78;
 }
-/* .row{
-	margin: 0px; 
-    padding: 0px; 
-    width: 878px; 
-}
-.basics{
-	border-style: solid; 
-    border-color: #A31621; 
-    margin: 10px; 
-}
-.req{
-	border-style: solid; 
-    margin: 10px;
-    float: right; 
-}
-.attach{
-	border-style: solid; 
-    border-color: #FFBE0B; 
-    margin: 10px;
-}
-a{
-  color: white; 
-}
 
+/*popup trello*/
 .modal-backdrop.in {
   opacity: 0.3; 
 }
@@ -525,3 +503,9 @@ a{
   width:100%;
   background-color:rgba(255,255,255,1);
 } 
+.row{
+  margin:10px; 
+}
+.req{
+  float: right; 
+}
