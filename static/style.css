@@ -326,6 +326,7 @@ h4.jobs-list-heading{
   top:0;
   left:0;
   display:none; 
+  border-radius: 3px;
 }
 a{
     color: white;
@@ -357,6 +358,7 @@ input[type=text] {
   cursor: pointer;
   float:right;
   margin-right:5px; 
+  border-radius: 5px;
 }
 
 .login-button:hover {
@@ -413,13 +415,17 @@ span.psw {
 .bug-button{
   background-color: red;
   color: white;
-	font: 14px "Lato";
+  font: 14px "Lato";
+  border-radius: 5px;
+  border-color: transparent; 
 }
 .close-btn{
   width: 100%;
   background-color: green;
   color: white;
-	font: 14px "Lato";
+  font: 14px "Lato";
+  border-radius: 5px;
+  border-color: transparent; 
 }
 
 #complete-jobs-list #color{
@@ -476,6 +482,7 @@ h2.jobs-list-heading{
   border-color: darkgrey; 
   border-radius: 10px;
   background-color: #e2e4e6;
+  border-width:thin; 
 }
 
 /* header colors */
