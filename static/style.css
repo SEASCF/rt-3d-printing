@@ -111,6 +111,16 @@ ul {
 /**********************************************************
 Body Section Styles
 ***********************************************************/
+.step-header{
+  font-size: 18px; 
+}
+.step{
+  width: 270px; 
+}
+.fa .fa-long-arrow-right{
+  width: 20px; 
+}
+
 #color{ 
        text-decoration:line-through;
 }
