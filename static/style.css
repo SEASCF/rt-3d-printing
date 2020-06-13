@@ -464,6 +464,7 @@ span.psw {
   border-color: darkgrey; 
   border-radius: 10px;
   background-color: #e2e4e6;
+  border-width: thin;
 }
 #has-boxes{
   background-color: rgba(186, 186, 186, 1.0);
