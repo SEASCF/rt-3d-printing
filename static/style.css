@@ -116,6 +116,7 @@ Body Section Styles
 }
 .step{
   width: 270px; 
+  text-align: center;
 }
 .fa .fa-long-arrow-right{
   width: 20px; 
@@ -255,7 +256,7 @@ h4.jobs-list-heading{
 	height: 21vh;
 }
 /* The container */
-.container {
+.check-container {
   display: block;
   position: relative;
   padding-left: 20px;
@@ -268,7 +269,7 @@ h4.jobs-list-heading{
 }
 
 /* Hide the browser's default checkbox */
-.container input {
+.check-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -287,7 +288,7 @@ h4.jobs-list-heading{
 } 
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.check-container:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
@@ -300,12 +301,12 @@ h4.jobs-list-heading{
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.check-container input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.container .checkmark:after {
+.check-container .checkmark:after {
   left: 5px;
   top: 2px;
   width: 4px;
@@ -466,6 +467,12 @@ span.psw {
   background-color: #e2e4e6;
   border-width: thin;
 }
+.tank{
+  height: 27vh;
+}
+.print{
+  height: 20vh;
+}
 #has-boxes{
   background-color: rgba(186, 186, 186, 1.0);
 }
@@ -501,4 +508,8 @@ h2.jobs-list-heading{
 }
 #fifth-col{
   background-color:#735D78;
+}
+
+label{
+
 }
