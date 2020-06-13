@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <link href="../static/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>3D Print Tracker</title>
@@ -20,21 +19,22 @@
     <script src="{{ url_for('static', filename='refresh.js') }}"></script></body>
     <script src="{{ url_for('static', filename='checkbox.js') }}"></script></body>
     <script src="{{ url_for('static', filename='login.js') }}"></script></body>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <div class = step-header>
 	    <table>
  		 <tr>
-   		 <th>Step 1</th>
-   		 <th><i class="fa fa-long-arrow-right" style="font-size:36px"></i></th>
-   		 <th>Step 2</th>
-   		 <th><i class="fa fa-long-arrow-right" style="font-size:36px"></i></th>
-   		 <th>Step 3</th>
-    		<th><i class="fa fa-long-arrow-right" style="font-size:36px"></i></th>
-   		 <th>Step 4</th>
-    		<th><i class="fa fa-long-arrow-right" style="font-size:36px"></i></th>
-   		 <th>Step 5</th>
+   		 <th class="step">Step 1</th>
+   		 <th><i class="fa fa-long-arrow-right"></i></th>
+   		 <th class="step">Step 2</th>
+   		 <th><i class="fa fa-long-arrow-right"></i></th>
+   		 <th class="step">Step 3</th>
+    		<th><i class="fa fa-long-arrow-right"></i></th>
+   		 <th class="step">Step 4</th>
+    		<th><i class="fa fa-long-arrow-right"></i></th>
+   		 <th class="step">Step 5</th>
 		  </tr>
 	    </table>
     </div>
