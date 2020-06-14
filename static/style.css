@@ -496,19 +496,24 @@ h2.jobs-list-heading{
 
 /* header colors */
 #first-col{
-  background-color:#F7D1CD;
+  background-color:#6B1220;
+  color: white; 
 }
 #second-col{
-  background-color:#E8C2CA;
+  background-color:#D16711;
+  color: white; 
 }
 #third-col{
-  background-color:#D1B3C4;
+  background-color:#E69512;
+  color: white; 
 }
 #fourth-col{
-  background-color:#B392AC;
+  background-color:#BECC29;
+  color: white; 
 }
 #fifth-col{
-  background-color:#735D78;
+  background-color:#0C751F;
+  color: white; 
 }
 
 label{
