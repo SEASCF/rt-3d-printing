@@ -122,7 +122,8 @@
                             {% if subject[i] == 'PRINTING ON PRINTER 1' %}
                                 <li>
                                   <div class="job-block" id="new-job-test">
-			               <form action="#" onchange="myFuncCheck(this)">
+                                    <button type="button" class="btn-modal" data-toggle="modal" data-target="#myModal">  
+			                        <form action="#" onchange="myFuncCheck(this)">
                                             <div class="job-name-block">
                                                 <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
                                                 <div> <label class="check-container">
@@ -135,7 +136,8 @@
                                                 <div class="job-date">{{ date[i] }}</div>
                                                 <div class="user-email">{{ requestors[i] }}</div>
                                             </div>
-				                    </form>
+                                    </form>
+                                    </button>
 				                </div>
                                 </li>
                             {% endif %}
@@ -151,7 +153,8 @@
                             {% if subject[i] == 'PRINTING ON PRINTER 2' %}
                                 <li>
                                  <div class="job-block" id="new-job-test">
-			                 <form action="#" onchange="myFuncCheck(this)"> 
+                                <button type="button" class="btn-modal" data-toggle="modal" data-target="#myModal">  
+			                    <form action="#" onchange="myFuncCheck(this)"> 
                                             <div class="job-name-block">
                                                 <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
                                                 <div> <label class="check-container">
@@ -164,7 +167,8 @@
                                                 <div class="job-date">{{ date[i] }}</div>
                                                 <div class="user-email">{{ requestors[i] }}</div>
                                             </div>
-				                    </form>
+                                    </form>
+                                </button>
 				                </div>
                                 </li>
                             {% endif %}
@@ -180,6 +184,7 @@
                             {% if subject[i] == 'PRINTING ON PRINTER 3' %}
                                 <li>
                                     <div class="job-block" id="new-job-test">
+                                    <button type="button" class="btn-modal" data-toggle="modal" data-target="#myModal">  
 			                        <form action="#" onchange="myFuncCheck(this)">
                                             <div class="job-name-block">
                                                 <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
@@ -193,7 +198,8 @@
                                                 <div class="job-date">{{ date[i] }}</div>
                                                 <div class="user-email">{{ requestors[i] }}</div>
                                             </div>
-				                    </form>
+                                    </form>
+                                    </button>
 				                </div>
                                 </li>
                             {% endif %}
@@ -209,6 +215,7 @@
                             {% if subject[i] == 'PRINTING ON PRINTER 4' %}
                                 <li>
                                    <div class="job-block" id="new-job-test">
+                                    <button type="button" class="btn-modal" data-toggle="modal" data-target="#myModal">     
 			                        <form action="#" onchange="myFuncCheck(this)">
                                             <div class="job-name-block">
                                                 <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
@@ -222,7 +229,8 @@
                                                 <div class="job-date">{{ date[i] }}</div>
                                                 <div class="user-email">{{ requestors[i] }}</div>
                                             </div>
-				                    </form>
+                                    </form>
+                                    </button>
 				                </div>
                                 </li>
                             {% endif %}
@@ -242,6 +250,7 @@
                             {% if subject[i] == 'IN CLEANING TANK 1' %}
                                 <li>
                                   <div class="job-block" id="new-job-test">
+                                  <button type="button" class="btn-modal" data-toggle="modal" data-target="#myModal">  
 			                        <form action="#" onchange="myFuncCheck(this)">
                                             <div class="job-name-block">
                                                 <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
@@ -255,7 +264,8 @@
                                                 <div class="job-date">{{ date[i] }}</div>
                                                 <div class="user-email">{{ requestors[i] }}</div>
                                             </div>
-				                    </form>
+                                    </form>
+                                  </button>
 				                </div>
                                 </li>
                             {% endif %}
@@ -271,6 +281,7 @@
                             {% if subject[i] == 'IN CLEANING TANK 2' %}
                                 <li>
                                   <div class="job-block" id="new-job-test">
+                                    <button type="button" class="btn-modal" data-toggle="modal" data-target="#myModal">  
 			                        <form action="#" onchange="myFuncCheck(this)">
                                             <div class="job-name-block">
                                                 <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
@@ -284,8 +295,9 @@
                                                 <div class="job-date">{{ date[i] }}</div>
                                                 <div class="user-email">{{ requestors[i] }}</div>
                                             </div>
-				                    </form>
-				                </div>
+                                    </form>
+                                    </button>
+                                </div>
                                 </li>
                             {% endif %}
                         {% endfor %}
@@ -300,6 +312,7 @@
                             {% if subject[i] == 'IN CLEANING TANK 3' %}
                                 <li>
                                   <div class="job-block" id="new-job-test">
+                                    <button type="button" class="btn-modal" data-toggle="modal" data-target="#myModal">  
 			                        <form action="#" onchange="myFuncCheck(this)">
                                             <div class="job-name-block">
                                                 <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
@@ -313,7 +326,8 @@
                                                 <div class="job-date">{{ date[i] }}</div>
                                                 <div class="user-email">{{ requestors[i] }}</div>
                                             </div>
-				                    </form>
+                                    </form>
+                                    </button>
 				                </div>
                                 </li>
                             {% endif %}
@@ -332,6 +346,7 @@
                             {% if subject[i] == 'DRYING' %}
                                 <li>
                                    <div class="job-block" id="new-job-test">
+                                    <button type="button" class="btn-modal" data-toggle="modal" data-target="#myModal">  
 			                        <form action="#" onchange="myFuncCheck(this)">
                                             <div class="job-name-block">
                                                 <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
@@ -345,7 +360,8 @@
                                                 <div class="job-date">{{ date[i] }}</div>
                                                 <div class="user-email">{{ requestors[i] }}</div>
                                             </div>
-				                    </form>
+                                    </form>
+                                    </button>
 				                </div>
                                 </li>
                             {% endif %}
@@ -364,6 +380,7 @@
                             {% if subject[i] == 'READY FOR PICKUP' %}
                                 <li>
                                 <div class="job-block" id="new-job-test">
+                                    <button type="button" class="btn-modal" data-toggle="modal" data-target="#myModal">  
 			                        <form action="#" onchange="myFuncCheck(this)">
                                             <div class="job-name-block">
                                                 <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
@@ -377,7 +394,8 @@
                                                 <div class="job-date">{{ date[i] }}</div>
                                                 <div class="user-email">{{ requestors[i] }}</div>
                                             </div>
-				                    </form>
+                                    </form>
+                                    </button>
 				                </div>
                                 </li>
                             {% endif %}
