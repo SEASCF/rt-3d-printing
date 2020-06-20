@@ -148,8 +148,16 @@ def closeTickets():
     # after closing tickets, call populate to refresh the page
     populate()
     
-    return ""
+    return
 
+@app.route("api/sendTicketInfo", methods=['POST'])
+def sendTicketInfo():
+    ticket_num = request.form['ticket_num']
 
+    t = tracker.get_ticket(ticket_num)
+
+    return render_template('home.html', title=home, modal_ticket = t)
+
+    
 if __name__ == '__main__':
     app.run(debug=True)
