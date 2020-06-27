@@ -8,8 +8,4 @@ function populateModal(theForm){
     document.getElementById("modal-ticketid").innerHTML = "ID: " + ticketId; 
     document.getElementById("modal-ticketdc").innerHTML = "Date Created: " + dateCreated; 
     document.getElementById("modal-ticketreq").innerHTML = "Requestor: " + requestorName; 
-
-    $.post( "/api/populate", {
-        ticket_num: ticketId
-      });
 }

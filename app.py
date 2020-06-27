@@ -34,6 +34,12 @@ def populate():
     date = []
     ticket_number = []
     subj = []
+    owner = []
+    date_updated = []
+    priority = []
+    status = []
+    attachment = []
+
 
     # remove any tickets from list that are not 3D printing requests
     for ticket in tickets:
@@ -50,6 +56,9 @@ def populate():
         requestors.append(t["Requestors"])
         date.append(t["Created"])
         subj.append(t["Subject"])
+        owner.append(t["Owner"])
+        priority.append(t["Priority"])
+        status.append(t["Status"])
 
     # format requestor name so that it is just the netid
     for i in range(len(requestors)):
@@ -62,8 +71,8 @@ def populate():
         requestors[i] = str(requestors[i])[0:j]
 
     # format date so it's just month/day/weekday
-    for i in range(len(date)):
-        date[i] = str((date[i])[0:11])
+    for i in range(len(date_created)):
+        date_created[i] = str((date_created[i])[0:11])
 
     # format subject so it's just the important part
     detect_subj = -1
@@ -77,13 +86,9 @@ def populate():
             subj[i] = ''
         else:
             subj[i] = valid_subj[j]
-    try: 
-        modal_ticket = request.form['ticket_num']
-        modal_ticket_info = tracker.get_ticket(modal_ticket)
-    except: 
-        modal_ticket_info = 0
+    
     # send all of these formatted lists to the html file to populate the board
-    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date, subject=subj, num_tickets=len(tickets), modal_ticket_info = modal_ticket_info)
+    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date_created=date_created, subject=subj, num_tickets=len(tickets), owner=owner, status=status, priority=priority, attachment = attachment)
 
 '''
     updateTicket will be triggered when a card is dragged to a new column.
@@ -97,7 +102,7 @@ def updateTicket():
     queue = request.form['new_queue']
 
     valid_subj = ['PRINTING ON PRINTER 1 -', 'PRINTING ON PRINTER 2 -', 'PRINTING ON PRINTER 3 -', 'PRINTING ON PRINTER 4 -', 'IN CLEANING TANK 1 -', 'IN CLEANING TANK 2 -', 'IN CLEANING TANK 3 -', 'DRYING -', 'READY FOR PICKUP -']
-    email = "Hello,\n\nYour print is ready for pickup from Tompkins 401. Please visit our office at your earliest convenience to retreive your print. Our hours are: \nMonday-Friday: 8am-1am\nSaturday-Sunday: 10am-10pm\n\nThank you,\nSEASCF"
+    email = "Hello,\n\nYour print is ready for pickup from Tompkins 401. Please visit our office at your earliest convenience to retrieve your print. Our hours are: \nMonday-Friday: 8am-1am\nSaturday-Sunday: 10am-10pm\n\nThank you,\nSEASCF"
 
     t = tracker.get_ticket(ticket_number)
     prev_owner = t['Owner']
