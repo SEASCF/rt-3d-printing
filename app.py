@@ -79,7 +79,7 @@ def populate():
             subj[i] = valid_subj[j]
 
     # send all of these formatted lists to the html file to populate the board
-    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date, subject=subj, num_tickets=len(tickets))
+    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date, subject=subj, num_tickets=len(tickets), modal_ticket="")
 
 '''
     updateTicket will be triggered when a card is dragged to a new column.
@@ -150,13 +150,13 @@ def closeTickets():
     
     return
 
-@app.route("api/sendTicketInfo", methods=['POST'])
+@app.route("/api/sendTicketInfo", methods=['POST'])
 def sendTicketInfo():
     ticket_num = request.form['ticket_num']
 
     t = tracker.get_ticket(ticket_num)
 
-    return render_template('home.html', title=home, modal_ticket = t)
+    return render_template('home.html', title='home', modal_ticket = t)
 
     
 if __name__ == '__main__':

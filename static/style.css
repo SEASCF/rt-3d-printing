@@ -238,7 +238,7 @@ h4.jobs-list-heading{
 .job-date{
 	font-size: 14px;
 	padding: 2px 8px 3px 8px;
-	background-color: #61bd4f;
+	background-color:#808080;
 	color: #fff;
 	display: inline-block;
 	border-radius: 5px;
@@ -415,7 +415,7 @@ span.psw {
   to {transform: scale(1)}
 }
 .bug-button{
-  background-color: red;
+  background-color: #B40439;
   color: white;
   font: 14px "Lato";
   border-radius: 5px;
@@ -423,7 +423,7 @@ span.psw {
 }
 .picked-btn{
   width: 100%;
-  background-color: green;
+  background-color: #0C751F;
   color: white;
   font: 14px "Lato";
   border-radius: 5px;
@@ -496,7 +496,7 @@ h2.jobs-list-heading{
 
 /* header colors */
 #first-col{
-  background-color:#6B1220;
+  background-color:#B40439; /*#6B1220*/
   color: white; 
 }
 #second-col{
@@ -540,4 +540,9 @@ label{
 }
 .req{
   float: right; 
+}
+
+#report-bug-btn:hover{
+  color: white;
+  text-decoration: none;
 }
