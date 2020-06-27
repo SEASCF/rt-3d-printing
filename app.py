@@ -38,7 +38,7 @@ def populate():
     priority = []
     status = []
     attachment = []
-
+    full_subj = []
 
     # remove any tickets from list that are not 3D printing requests
     for ticket in tickets:
@@ -73,6 +73,7 @@ def populate():
     for i in range(len(date_created)):
         date_created[i] = str((date_created[i])[0:11])
 
+    full_subj = subj
     # format subject so it's just the important part
     detect_subj = -1
     for i in range(0, len(subj)):
@@ -87,7 +88,7 @@ def populate():
             subj[i] = valid_subj[j]
     
     # send all of these formatted lists to the html file to populate the board
-    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date_created, subject=subj, num_tickets=len(tickets), owner=owner, status=status, priority=priority, attachment = attachment)
+    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date_created, subject=subj, full_subject = full_subj, num_tickets=len(tickets), owner=owner, status=status, priority=priority, attachment = attachment)
 
 '''
     updateTicket will be triggered when a card is dragged to a new column.
