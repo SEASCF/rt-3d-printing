@@ -78,8 +78,14 @@ def populate():
         else:
             subj[i] = valid_subj[j]
 
+    modal_ticket = request.form['ticket_num']
+    if modal_ticket != None:
+        modal_ticket_info = tracker.get_ticket(modal_ticket)
+    else: 
+        modal_ticket_info = 0
+
     # send all of these formatted lists to the html file to populate the board
-    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date, subject=subj, num_tickets=len(tickets))
+    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date, subject=subj, num_tickets=len(tickets), modal_ticket_info = modal_ticket_info)
 
 '''
     updateTicket will be triggered when a card is dragged to a new column.
