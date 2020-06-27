@@ -87,12 +87,14 @@
                                             <p>Queue: 3D Printing</p><br>
                                             <p>Priority: </p><br>
                                         </div>
+                                        {% if modal_ticket_info != 0 %} 
                                          <div class= "req col-sm-4">
-						                     <p>Owner: {{ modal_ticket["Owner"]}} </p><br>
+						                     <p>Owner: {{ modal_ticket_info["Owner"]}} </p><br>
                                              <p id="modal-ticketreq">Requestor: </p><br>
                                              <p id="modal-ticketdc">Date Created: </p><br>
                                              <p>Date Updated: </p><br>
                                         </div>
+                                        {% endif %}
                                         </div>
                                         <div class="row">
                                         <div class="attach col-sm-12">
