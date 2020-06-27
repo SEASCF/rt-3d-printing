@@ -31,11 +31,10 @@ def populate():
     valid_subj = ['PRINTING ON PRINTER 1', 'PRINTING ON PRINTER 2', 'PRINTING ON PRINTER 3', 'PRINTING ON PRINTER 4', 'IN CLEANING TANK 1', 'IN CLEANING TANK 2', 'IN CLEANING TANK 3', 'DRYING', 'READY FOR PICKUP']
 
     requestors = []
-    date = []
+    date_created = []
     ticket_number = []
     subj = []
     owner = []
-    date_updated = []
     priority = []
     status = []
     attachment = []
@@ -54,7 +53,7 @@ def populate():
     for i in ticket_number:
         t = tracker.get_ticket(i)
         requestors.append(t["Requestors"])
-        date.append(t["Created"])
+        date_created.append(t["Created"])
         subj.append(t["Subject"])
         owner.append(t["Owner"])
         priority.append(t["Priority"])
@@ -88,7 +87,7 @@ def populate():
             subj[i] = valid_subj[j]
     
     # send all of these formatted lists to the html file to populate the board
-    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date_created=date_created, subject=subj, num_tickets=len(tickets), owner=owner, status=status, priority=priority, attachment = attachment)
+    return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date_created, subject=subj, num_tickets=len(tickets), owner=owner, status=status, priority=priority, attachment = attachment)
 
 '''
     updateTicket will be triggered when a card is dragged to a new column.
