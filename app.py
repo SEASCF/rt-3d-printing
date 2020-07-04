@@ -52,6 +52,7 @@ def populate():
     # get requestor/date/subject with ticket number
     for i in ticket_number:
         t = tracker.get_ticket(i)
+        
         requestors.append(t["Requestors"])
         date_created.append(t["Created"])
         subj.append(t["Subject"])
@@ -73,7 +74,9 @@ def populate():
     for i in range(len(date_created)):
         date_created[i] = str((date_created[i])[0:11])
 
-    full_subj = subj
+    # keep a list of the full subject for popup
+    full_subj.extend(subj)
+
     # format subject so it's just the important part
     detect_subj = -1
     for i in range(0, len(subj)):
@@ -87,8 +90,18 @@ def populate():
         else:
             subj[i] = valid_subj[j]
     
+    # get attachments
+    for i in ticket_number:
+        t_attach = tracker.get_attachments_ids(i)
+        print(t_attach)
+        for j in range(0, len(t_attach)):
+            t = tracker.get_attachment(i, t_attach[j])
+            print(t["Content"])
+           
+
     # send all of these formatted lists to the html file to populate the board
     return render_template('home.html', title='Home', tickets=tickets, ticket_number=ticket_number, requestors=requestors, date=date_created, subject=subj, full_subject = full_subj, num_tickets=len(tickets), owner=owner, status=status, priority=priority, attachment = attachment)
+    
 
 '''
     updateTicket will be triggered when a card is dragged to a new column.

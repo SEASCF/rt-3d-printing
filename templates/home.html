@@ -55,12 +55,12 @@
                                 <li>
                                <div class="job-block" id="new-job-test">
                                <button type="button" class="btn-modal" data-toggle="modal" data-target="#myModal" onclick="populateModal(this)">  
-			                   <form action="#" onchange="myFuncCheck(this)">
+                               <form action="#" onchange="myFuncCheck(this)">
+                                <div class="owner">{{owner[i]}}</div>
+                                <div class="status">{{status[i]}}</div>
+                                <div class="subject">{{full_subject[i]}}</div>
                                             <div class="job-name-block">
                                                 <div class="job-name" id="job-name">{{ ticket_number[i] }}</div>
-                                                <div class="owner">{{owner[i]}}</div>
-                                                <div class="status">{{status[i]}}</div>
-                                                <div class="priority">{{priority[i]}}</div>
                                                 <div> <label class="check-container">
                                                     <input type="checkbox"id="cbox">
                                                     <span class="checkmark"id="cover"></span><br>
@@ -80,17 +80,17 @@
                                       <div class="modal-popup">
                                         <div class="modal-header">
                                           <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                          <h4 class="modal-title">Ticket Details</h4>
+                                          <h4 id="modal-tickettitle">Ticket Details</h4>
                                         </div>
                                  
                                         <div class="row">
                                         <div class="basics col-sm-4">
                                             <p id="modal-ticketid">ID: </p><br>
-                                            <p>Status: </p><br>
+                                            <p id="modal-ticketstatus">Status: </p><br>
                                             <p>Queue: 3D Printing</p><br>
                                         </div>
                                          <div class= "req col-sm-4">
-					                         <p>Owner: </p><br>
+					                         <p id="modal-ticketowner">Owner: </p><br>
                                              <p id="modal-ticketreq">Requestor: </p><br>
                                              <p id="modal-ticketdc">Date Created: </p><br>
                                         </div>
